@@ -2,28 +2,29 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>EzPets | Cadastre seu Pet Shop</title>
     <!-- Link CSS -->
-    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css" />
 
     <!-- Link normalize.css -->
-    <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css">
+    <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css" />
 
     <!-- Link Boostrap -->
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
 
     <!-- Link Icons Bootstrap -->
-    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css" />
 </head>
+
 <body>
     <div class="main-content">
         <!-- Header -->
         <header id="header">
             <nav id="nav-header">
-                <a href="./index.html"><img src="./imgs/logo-ezpets.svg" alt="Logo EzPets" class="logo"></a>
+                <a href="./index.html"><img src="./imgs/logo-ezpets.svg" alt="Logo EzPets" class="logo" /></a>
                 <ul class="list-options">
                     <li>Como Funciona</li>
                     <!-- Dropdown -->
@@ -56,16 +57,38 @@
         </header>
         <section id="main-section">
             <div class="bg-pets"></div>
-            <div class="signUp-box">
+            <div class="card-login-signup">
                 <form action="" method="POST">
                     <h3 id="form-title">Cadastre sua Pet Shop</h3>
-                    
+                    <p class="form-subtitle">Sua vida mais easy!</p>
+
+                    <label for="signup-name">Nome:</label>
+                    <input type="text" name="signup-name" id="signup-name" />
+                    <label for="signup-email">E-mail:</label>
+                    <input type="email" name="signup-email" id="signup-email" />
+                    <label for="signup-tel">Telefone:</label>
+                    <input type="text" name="signup-tel" id="signup-tel" />
+
+                    <button>Cadastrar</button>
+                </form>
+                <form action="" method="POST">
+                    <h3 id="form-title">Log In do  Pet Shop</h3>
+                    <p class="form-subtitle">Sua vida mais easy!</p>
+
+                    <label for="login-email">E-mail:</label>
+                    <input type="email" name="login-email" id="login-email" />
+                    <label for="signup-tel">Telefone:</label>
+                    <input type="text" name="signup-tel" id="signup-tel" />
+
+                    <button>Cadastrar</button>
                 </form>
             </div>
         </section>
+        <footer>EzPets - Todos os direitos reservados &copy; 2023</footer>
     </div>
     <script src="./index.js"></script>
     <!-- Script Bootstrap -->
     <script src="./node_modules/bootstrap/js/dist/"></script>
 </body>
+
 </html>
