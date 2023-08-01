@@ -1,4 +1,32 @@
 @import "./outhers/colors.scss";
-@import "./pages/signUp.scss";
-@import "./pages/login.scss";
+@import "./pages/signup-login.scss";
 
+.main-content{
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+a.link-logo{
+    width:15%;
+}
+
+p{
+    margin: 0!important;
+}
+
+hr{
+    margin: 0!important;
+}
+
+.logo{
+    width: 170px;
+}
+
+#main-section{
+    width: 100%;
+    flex: 1 0 auto;
+}

@@ -24,31 +24,32 @@
         <!-- Header -->
         <header id="header">
             <nav id="nav-header">
-                <a href="./index.html"><img src="./imgs/logo-ezpets.svg" alt="Logo EzPets" class="logo" /></a>
-                <ul class="list-options">
-                    <li>Como Funciona</li>
-                    <!-- Dropdown -->
-                    <div class="dropdown">
-                        <div class="item">
-                            <p class="item-title">Pagamento</p>
-                            <p class="item-text"></p>
-                        </div>
-                        <div class="item">
-                            <p class="item-title">Nosso Plano</p>
-                            <p class="item-text"></p>
-                        </div>
-                        <div class="item">
-                            <p class="item-title">A EzPets</p>
-                            <p class="item-text"></p>
-                        </div>
+                <a href="" class="link-logo"><img src="./imgs/logo-ezpets.svg" alt="Logo EzPets"
+                        class="logo img-fluid" /></a>
+                <p class="header-option drop">Como Funciona</p>
+                <!-- Dropdown -->
+                <div class="dropdown">
+                    <div class="item">
+                        <p class="item-title">Pagamento</p>
+                        <p class="item-text">Como é realizado o pagamento da EzPets para minha loja?</p>
+                    </div><hr>
+                    <div class="item">
+                        <p class="item-title">Nosso Plano</p>
+                        <p class="item-text">Descubra os benefícios de ser um parceiro.</p>
+                    </div><hr>
+                    <div class="item">
+                        <p class="item-title">A EzPets</p>
+                        <p class="item-text">Conheça um pouco mais sobre nós.</p>
                     </div>
-                    <li>Ajuda</li>
-                </ul>
+                </div>
+                <p class="header-option">Ajuda</p>
+                <!-- Buttons (Log In and Sign Up) -->
                 <div class="login-btns">
                     <button>Entrar</button>
                     <button>Cadastre-se</button>
                 </div>
             </nav>
+            <!-- Menu Hamburguer -->
             <div class="menu-hamb">
                 <span></span>
                 <span></span>
@@ -58,7 +59,8 @@
         <section id="main-section">
             <div class="bg-pets"></div>
             <div class="card-login-signup">
-                <form action="" method="POST">
+                <!-- Sign Up Form -->
+                <form action="" method="POST" id="form-signup-box">
                     <h3 id="form-title">Cadastre sua Pet Shop</h3>
                     <p class="form-subtitle">Sua vida mais easy!</p>
 
@@ -71,8 +73,8 @@
 
                     <button class="btn-form-signup">Cadastrar</button>
                 </form>
-                <form action="" method="POST">
-                    <h3 id="form-title">Log In do  Pet Shop</h3>
+                <form action="" method="POST" id="form-login-box">
+                    <h3 id="form-title">Log In do Pet Shop</h3>
                     <p class="form-subtitle">Sua vida mais easy!</p>
 
                     <label for="login-email">E-mail:</label>

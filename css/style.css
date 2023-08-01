@@ -1,9 +1,84 @@
-* {
+#header {
+  width: 100%;
+  height: 15vh;
+  background-color: #fff;
+  display: flex;
+  flex-direction: row;
+  padding: 15px 20px;
+  align-items: center;
+}
+
+#nav-header {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+#nav-header .header-option {
+  font-size: 18px;
+  font-weight: bold;
   margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  scroll-behavior: smooth;
-  font-size: 100%;
+  cursor: pointer;
+}
+#nav-header .dropdown {
+  width: 18rem;
+  background-color: #fff;
+  position: absolute;
+  top: 15%;
+  left: 23.7%;
+  border-radius: 12px;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
+  overflow: hidden;
+}
+#nav-header .dropdown .item {
+  padding: 10px 10px;
+  width: 100%;
+}
+#nav-header .dropdown .item:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+#nav-header .dropdown .item-title {
+  font-size: 17px;
+  color: #F27649;
+  font-weight: bold;
+  padding-bottom: 5px;
+}
+#nav-header .login-btns {
+  width: 30%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.main-content {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+a.link-logo {
+  width: 15%;
+}
+
+p {
+  margin: 0 !important;
+}
+
+hr {
+  margin: 0 !important;
+}
+
+.logo {
+  width: 170px;
+}
+
+#main-section {
+  width: 100%;
+  flex: 1 0 auto;
 }
 
 /*# sourceMappingURL=style.css.map */

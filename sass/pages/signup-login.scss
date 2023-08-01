@@ -1,0 +1,54 @@
+@import "../outhers/colors.scss";
+
+#header {
+  width: 100%;
+  height: 15vh;
+  background-color: $white-text;
+  display: flex;
+  flex-direction: row;
+  padding: 15px 20px;
+  align-items: center;
+}
+
+#nav-header {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .header-option {
+    font-size: 18px;
+    font-weight: bold;
+    margin: 0;
+    cursor: pointer;
+  }
+  .dropdown {
+    width: 18rem;
+    background-color: $white-text;
+    position: absolute;
+    top: 15%;
+    left: 23.7%;
+    border-radius: 12px;
+    box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    .item {
+      padding: 10px 10px;
+      width: 100%;
+      &:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+      }
+    }
+    .item-title {
+      font-size: 17px;
+      color: $primary-color;
+      font-weight: bold;
+      padding-bottom: 5px;
+    }
+  }
+  .login-btns {
+    width: 30%;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+}
