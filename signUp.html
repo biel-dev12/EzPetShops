@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
@@ -13,84 +12,101 @@
     <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css" />
 
     <!-- Link Boostrap -->
-    <link rel="stylesheet" href="./node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
+    />
 
     <!-- Link Icons Bootstrap -->
-    <link rel="stylesheet" href="./node_modules/bootstrap-icons/font/bootstrap-icons.css" />
-</head>
+    <link
+      rel="stylesheet"
+      href="./node_modules/bootstrap-icons/font/bootstrap-icons.css"
+    />
+  </head>
 
-<body>
+  <body>
     <div class="main-content">
-        <!-- Header -->
-        <header id="header">
-            <nav id="nav-header">
-                <a href="" class="link-logo"><img src="./imgs/logo-ezpets.svg" alt="Logo EzPets"
-                        class="logo img-fluid" /></a>
-                <p class="header-option drop">Como Funciona</p>
-                <!-- Dropdown -->
-                <div class="dropdown">
-                    <div class="item">
-                        <p class="item-title bi bi-cash-stack">  Pagamento</p>
-                        <p class="item-text">Como é realizado o pagamento da EzPets para minha loja?</p>
-                    </div><hr>
-                    <div class="item">
-                        <p class="item-title bi bi-stars"> Nosso Plano</p>
-                        <p class="item-text">Descubra os benefícios de ser um parceiro.</p>
-                    </div><hr>
-                    <div class="item">
-                        <p class="item-title">A EzPets</p>
-                        <p class="item-text">Conheça um pouco mais sobre nós.</p>
-                    </div>
-                </div>
-                <p class="header-option">Ajuda</p>
-                <!-- Buttons (Log In and Sign Up) -->
-                <div class="login-btns">
-                    <button class="login">Entrar</button>
-                    <button class="signup">Cadastre-se</button>
-                </div>
-            </nav>
-            <!-- Menu Hamburguer -->
-            <div class="menu-hamb">
-                <span></span>
-                <span></span>
-                <span></span>
+      <!-- Header -->
+      <header id="header">
+        <a href="" class="link-logo"
+          ><img
+            src="./imgs/logo-ezpets.svg"
+            alt="Logo EzPets"
+            class="logo img-fluid"
+        /></a>
+        <nav id="nav-header">
+          <div class="box-options">
+            <p class="header-option drop">Como Funciona</p>
+            <!-- Dropdown -->
+            <div class="dropdown">
+              <div class="item">
+                <p class="item-title bi bi-cash-stack">Pagamento</p>
+                <p class="item-text">
+                  Como é realizado o pagamento da EzPets para minha loja?
+                </p>
+              </div>
+              <hr />
+              <div class="item">
+                <p class="item-title bi bi-stars">Nosso Plano</p>
+                <p class="item-text">
+                  Descubra os benefícios de ser um parceiro.
+                </p>
+              </div>
+              <hr />
+              <div class="item">
+                <p class="item-title">A EzPets</p>
+                <p class="item-text">Conheça um pouco mais sobre nós.</p>
+              </div>
             </div>
-        </header>
-        <section id="main-section">
-            <div class="bg-pets"></div>
-            <div class="card-login-signup">
-                <!-- Sign Up Form -->
-                <form action="" method="POST" id="form-signup-box">
-                    <h3 id="form-title">Cadastre sua Pet Shop</h3>
-                    <p class="form-subtitle">Sua vida mais easy!</p>
+            <p class="header-option"><a href="">Ajuda</a></p>
+          </div>
+          <!-- Buttons (Log In and Sign Up) -->
+          <div class="login-btns">
+            <button class="login">Entrar</button>
+            <button class="signup">Cadastre-se</button>
+          </div>
+        </nav>
+        <!-- Menu Hamburguer -->
+        <div class="menu-hamb">
+          <span class="hamb-top"></span>
+          <span class="hamb-middle"></span>
+          <span class="hamb-bottom"></span>
+        </div>
+      </header>
+      <section id="main-section">
+        <div class="bg-pets"></div>
+        <div class="card-login-signup">
+          <!-- Sign Up Form -->
+          <form action="" method="POST" id="form-signup-box">
+            <h3 id="form-title">Cadastre sua Pet Shop</h3>
+            <p class="form-subtitle">Sua vida mais easy!</p>
 
-                    <label for="signup-name">Nome:</label>
-                    <input type="text" name="signup-name" id="signup-name" />
-                    <label for="signup-email">E-mail:</label>
-                    <input type="email" name="signup-email" id="signup-email" />
-                    <label for="signup-tel">Telefone:</label>
-                    <input type="text" name="signup-tel" id="signup-tel" />
+            <label for="signup-name">Nome:</label>
+            <input type="text" name="signup-name" id="signup-name" />
+            <label for="signup-email">E-mail:</label>
+            <input type="email" name="signup-email" id="signup-email" />
+            <label for="signup-tel">Telefone:</label>
+            <input type="text" name="signup-tel" id="signup-tel" />
 
-                    <button class="btn-form-signup">Cadastrar</button>
-                </form>
-                <form action="" method="POST" id="form-login-box">
-                    <h3 id="form-title">Log In do Pet Shop</h3>
-                    <p class="form-subtitle">Sua vida mais easy!</p>
+            <button class="btn-form-signup">Cadastrar</button>
+          </form>
+          <form action="" method="POST" id="form-login-box">
+            <h3 id="form-title">Log In do Pet Shop</h3>
+            <p class="form-subtitle">Sua vida mais easy!</p>
 
-                    <label for="login-email">E-mail:</label>
-                    <input type="email" name="login-email" id="login-email" />
-                    <label for="login-pass">Senha:</label>
-                    <input type="text" name="login-pass" id="login-pass" />
+            <label for="login-email">E-mail:</label>
+            <input type="email" name="login-email" id="login-email" />
+            <label for="login-pass">Senha:</label>
+            <input type="text" name="login-pass" id="login-pass" />
 
-                    <button class="btn-form-login">Entrar</button>
-                </form>
-            </div>
-        </section>
-        <footer>EzPets - Todos os direitos reservados &copy; 2023</footer>
+            <button class="btn-form-login">Entrar</button>
+          </form>
+        </div>
+      </section>
+      <footer>EzPets - Todos os direitos reservados &copy; 2023</footer>
     </div>
-    <script src="./index.js"></script>
+    <script src="./js/index.js" type="module"></script>
     <!-- Script Bootstrap -->
-    <script src="./node_modules/bootstrap/js/dist/"></script>
-</body>
-
+    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+  </body>
 </html>

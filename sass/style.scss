@@ -1,32 +1,53 @@
 @import "./outhers/colors.scss";
 @import "./pages/signup-login.scss";
 
-.main-content{
-    min-width: 100vw;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+.main-content {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-a.link-logo{
-    width:15%;
+a.link-logo {
+  width: 15%;
 }
 
-p{
-    margin: 0!important;
+p {
+  margin: 0 !important;
 }
 
-hr{
-    margin: 0!important;
+hr {
+  margin: 0 !important;
 }
 
-.logo{
+.logo {
     width: 170px;
+    transition: all .1s;
+  &:hover {
+    animation: anim-logo .7s;
+  }
 }
 
-#main-section{
-    width: 100%;
-    flex: 1 0 auto;
+#main-section {
+  width: 100%;
+  flex: 1 0 auto;
+}
+
+@keyframes anim-logo {
+    0%{
+        transform: rotate(4deg);
+    }
+    25%{
+        transform: rotate(-4deg) scale(1.07);
+    }
+    50%{
+        transform: rotate(4deg);
+    }
+    100%{
+        transform: rotate(-4deg);
+
+    }
+    
 }
