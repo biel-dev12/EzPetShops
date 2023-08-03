@@ -22,4 +22,12 @@ export function dropdownAnim() {
     elDropdown.classList.toggle("show");
     isVisible = !isVisible;
   });
+  //verficando se o click foi e qualquer lugar sem ser o dropdown
+  document.addEventListener("click", (ev) => {
+    const targetEl = ev.target;
+    if(targetEl !== elOptionDrop && !elDropdown.contains(targetEl)){
+      elDropdown.classList.remove("show")
+      isVisible = false;
+    }
+    });
 }
