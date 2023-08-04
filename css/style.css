@@ -170,6 +170,21 @@
   color: #F27649;
 }
 
+#main-section {
+  height: 92vh;
+  display: grid;
+  grid-template-areas: "form" "bgPets";
+}
+#main-section .bg-pets {
+  grid-area: bgPets;
+  background: url("../../imgs/bgPets.svg") no-repeat center center;
+  background-size: cover;
+  background-position: center;
+}
+#main-section .card-login-signup {
+  grid-area: form;
+}
+
 body {
   overflow-x: hidden;
 }

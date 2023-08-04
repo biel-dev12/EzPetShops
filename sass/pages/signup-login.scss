@@ -166,3 +166,21 @@
     }
   }
 }
+
+#main-section{
+  height: 92vh;
+  display: grid;
+  grid-template-areas: 
+  "form"
+  "bgPets";
+  .bg-pets{
+    grid-area: bgPets;
+    background: url("../../imgs/bgPets.svg") no-repeat center center;
+    background-size: cover;
+    background-position: center;
+  }
+  .card-login-signup{
+    grid-area: form;
+  }
+}
+
