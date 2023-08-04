@@ -8,9 +8,6 @@
     <!-- Link CSS -->
     <link rel="stylesheet" href="./css/style.css" />
 
-    <!-- Link normalize.css -->
-    <link rel="stylesheet" href="./node_modules/normalize.css/normalize.css" />
-
     <!-- Link Boostrap -->
     <link
       rel="stylesheet"
@@ -28,16 +25,21 @@
     <div class="main-content">
       <!-- Header -->
       <header id="header">
-        <a href="" class="link-logo"
-          ><img
-            src="./imgs/logo-ezpets.svg"
-            alt="Logo EzPets"
-            class="logo img-fluid"
-        /></a>
+        <!-- Nav -->
         <nav id="nav-header">
-          <div class="box-options">
-            <p class="header-option drop">Como Funciona</p>
-            <!-- Dropdown -->
+          <a href="" class="link-logo"
+            ><img src="./imgs/logo-ezpets.svg" alt="Logo EzPets" class="logo"
+          /></a>
+          <!-- Menu Hamburguer -->
+          <div class="menu-hamb">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+          </div>
+          <ul id="nav-list">
+            <li class="li-drop">
+              <span>Como Funciona<span class="arrow bi bi-caret-right"></span></span>
+              <!-- Dropdown-->
             <div class="dropdown">
               <div class="item">
                 <p class="item-title bi bi-cash-stack">Pagamento</p>
@@ -52,28 +54,20 @@
                   Descubra os benefícios de ser um parceiro.
                 </p>
               </div>
-              <hr />
-              <div class="item">
-                <p class="item-title">A EzPets</p>
-                <p class="item-text">Conheça um pouco mais sobre nós.</p>
-              </div>
             </div>
-            <p class="header-option"><a href="">Ajuda</a></p>
-          </div>
-          <!-- Buttons (Log In and Sign Up) -->
-          <div class="login-btns">
-            <button class="login">Entrar</button>
-            <button class="signup">Cadastre-se</button>
-          </div>
+            </li>
+            <li><a href="" class="li-option">Ajuda</a></li>
+            <li><a href="" class="li-option">Sobre Nós</a></li>
+            <!-- Buttons (Log In and Sign Up) -->
+            <ul id="ul-btns">
+              <li><button class="btn-login">Entrar</button></li>
+              <li><button class="btn-signup">Cadastre-se</button></li>
+            </ul>
+          </ul>
         </nav>
-        <!-- Menu Hamburguer -->
-        <div class="menu-hamb">
-          <span class="hamb-top"></span>
-          <span class="hamb-middle"></span>
-          <span class="hamb-bottom"></span>
-        </div>
       </header>
-      <section id="main-section">
+      <!--Form-->
+      <main id="main-section">
         <div class="bg-pets"></div>
         <div class="card-login-signup">
           <!-- Sign Up Form -->
@@ -102,7 +96,7 @@
             <button class="btn-form-login">Entrar</button>
           </form>
         </div>
-      </section>
+      </main>
       <footer>EzPets - Todos os direitos reservados &copy; 2023</footer>
     </div>
     <script src="./js/index.js" type="module"></script>

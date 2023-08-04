@@ -1,6 +1,19 @@
 @import "./outhers/colors.scss";
 @import "./pages/signup-login.scss";
 
+body{overflow-x: hidden;}
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+*::after, *::before{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .main-content {
   min-width: 100vw;
   min-height: 100vh;
@@ -10,21 +23,11 @@
   align-items: center;
 }
 
-a.link-logo {
-  width: 15%;
-}
-
-p {
-  margin: 0 !important;
-}
-
 hr {
   margin: 0 !important;
 }
 
 .logo {
-    width: 170px;
-    transition: all .1s;
   &:hover {
     animation: anim-logo .7s;
   }
