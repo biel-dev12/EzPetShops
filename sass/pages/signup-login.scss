@@ -157,19 +157,45 @@
 }
 
 #main-section{
-  height: 92vh;
-  display: grid;
-  grid-template-areas: 
-  "form"
-  "bgPets";
-  .bg-pets{
-    grid-area: bgPets;
-    background: url("../../imgs/bgPets.svg") no-repeat center center;
-    background-size: cover;
-    background-position: center;
-  }
+  height: 87vh;
   .card-login-signup{
-    grid-area: form;
+    height: 100%;
+    background-color: $terc-color;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .card-container{
+      background-color: aqua;
+      height: 95%;
+      width: 80%;
+      position: relative;
+      perspective: 1000px;
+      @mixin front-back{
+        position: absolute;
+        backface-visibility: hidden;
+        transform-style: preserve-3d;
+        transition: all 1s ease;
+      }
+      &:hover .front{
+        transform: rotateY(-180deg);
+      }
+      &:hover .back{
+        transform: rotateY(0deg);
+      }
+      .front{
+        @include front-back;
+        transform: rotateY(0deg);
+      }
+      .back{
+        @include front-back;
+        transform: rotateY(180deg);
+
+      }
+    }
   }
+}
+
+#footer{
+  height: 5vh;
 }
 

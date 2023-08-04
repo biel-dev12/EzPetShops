@@ -159,18 +159,45 @@
 }
 
 #main-section {
-  height: 92vh;
-  display: grid;
-  grid-template-areas: "form" "bgPets";
-}
-#main-section .bg-pets {
-  grid-area: bgPets;
-  background: url("../../imgs/bgPets.svg") no-repeat center center;
-  background-size: cover;
-  background-position: center;
+  height: 87vh;
 }
 #main-section .card-login-signup {
-  grid-area: form;
+  height: 100%;
+  background-color: #FDE3A8;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#main-section .card-login-signup .card-container {
+  background-color: aqua;
+  height: 95%;
+  width: 80%;
+  position: relative;
+  perspective: 1000px;
+}
+#main-section .card-login-signup .card-container:hover .front {
+  transform: rotateY(-180deg);
+}
+#main-section .card-login-signup .card-container:hover .back {
+  transform: rotateY(0deg);
+}
+#main-section .card-login-signup .card-container .front {
+  position: absolute;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: all 1s ease;
+  transform: rotateY(0deg);
+}
+#main-section .card-login-signup .card-container .back {
+  position: absolute;
+  backface-visibility: hidden;
+  transform-style: preserve-3d;
+  transition: all 1s ease;
+  transform: rotateY(180deg);
+}
+
+#footer {
+  height: 5vh;
 }
 
 body {

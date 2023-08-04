@@ -23,27 +23,27 @@ export function dropdownAnim() {
   const arrowIcon = document.querySelector(".arrow");
 
   let isVisible = false;
-
   elOptionDrop.addEventListener("click", () => {
     elDropdown.classList.toggle("show");
-    arrowIcon.classList.remove("bi-caret-right");
-    arrowIcon.classList.add("bi-caret-down-fill");
-    isVisible = !isVisible;
-    if(isVisible === false){ 
-      arrowIcon.classList.remove("bi-caret-down-fill");
-      arrowIcon.classList.add("bi-caret-right");
+    if (arrowIcon.classList.contains("right")) {
+      arrowIcon.src = "./imgs/caret-down-fill.svg";
+      arrowIcon.classList.remove("right");
+      arrowIcon.classList.add("down");
+    } else if (arrowIcon.classList.contains("down")) {
+      arrowIcon.src = "./imgs/caret-right.svg";
+      arrowIcon.classList.remove("down");
+      arrowIcon.classList.add("right");
     }
+    isVisible = !isVisible;
   });
   //verficando se o click foi e qualquer lugar sem ser o dropdown
   document.addEventListener("click", (ev) => {
     const targetEl = ev.target;
-    if(targetEl !== elOptionDrop && !elDropdown.contains(targetEl)){
+    if (targetEl !== elOptionDrop && !elDropdown.contains(targetEl)) {
       elDropdown.classList.remove("show");
-      // arrowIcon.classList.remove("bi-caret-down-fill");
-      arrowIcon.classList.add("bi-caret-right");
+      arrowIcon.classList.add("right");
+      arrowIcon.src = "./imgs/caret-right.svg";
       isVisible = false;
     }
-    });
+  });
 }
-
-

@@ -7,20 +7,7 @@
     <title>EzPets | Cadastre seu Pet Shop</title>
     <!-- Link CSS -->
     <link rel="stylesheet" href="./css/style.css" />
-
-    <!-- Link Boostrap -->
-    <link
-      rel="stylesheet"
-      href="./node_modules/bootstrap/dist/css/bootstrap.min.css"
-    />
-
-    <!-- Link Icons Bootstrap -->
-    <link
-      rel="stylesheet"
-      href="./node_modules/bootstrap-icons/font/bootstrap-icons.css"
-    />
   </head>
-
   <body>
     <div class="main-content">
       <!-- Header -->
@@ -38,7 +25,7 @@
           </div>
           <ul id="nav-list">
             <li class="li-drop">
-              <span>Como Funciona<span class="arrow bi bi-caret-right"></span></span>
+              <span>Como Funciona<img src="./imgs/caret-right.svg" class="arrow right"></img></span>
               <!-- Dropdown-->
             <div class="dropdown">
               <div class="item">
@@ -71,7 +58,8 @@
         <div class="bg-pets"></div>
         <div class="card-login-signup">
           <!-- Sign Up Form -->
-          <form action="" method="POST" id="form-signup-box">
+         <div class="card-container">
+          <form action="" method="POST" id="form-signup-box" class="front">
             <h3 id="form-title">Cadastre sua Pet Shop</h3>
             <p class="form-subtitle">Sua vida mais easy!</p>
 
@@ -84,7 +72,7 @@
 
             <button class="btn-form-signup">Cadastrar</button>
           </form>
-          <form action="" method="POST" id="form-login-box">
+          <form action="" method="POST" id="form-login-box" class="back">
             <h3 id="form-title">Log In do Pet Shop</h3>
             <p class="form-subtitle">Sua vida mais easy!</p>
 
@@ -95,9 +83,10 @@
 
             <button class="btn-form-login">Entrar</button>
           </form>
+         </div>
         </div>
       </main>
-      <footer>EzPets - Todos os direitos reservados &copy; 2023</footer>
+      <footer id="footer">EzPets - Todos os direitos reservados &copy; 2023</footer>
     </div>
     <script src="./js/index.js" type="module"></script>
     <!-- Script Bootstrap -->
