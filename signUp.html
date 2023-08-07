@@ -25,7 +25,7 @@
           </div>
           <ul id="nav-list">
             <li class="li-drop">
-              <span>Como Funciona<img src="./imgs/caret-right.svg" class="arrow right"></img></span>
+              <span>Como Funciona<img src="./imgs/caret-right.svg" class="arrow right" alt="arrow-icon"></img></span>
               <!-- Dropdown-->
             <div class="dropdown">
               <div class="item">
@@ -63,12 +63,18 @@
             <h3 id="form-title">Cadastre sua Pet Shop</h3>
             <p class="form-subtitle">Sua vida mais easy!</p>
 
-            <label for="signup-name">Nome:</label>
-            <input type="text" name="signup-name" id="signup-name" />
-            <label for="signup-email">E-mail:</label>
-            <input type="email" name="signup-email" id="signup-email" />
-            <label for="signup-tel">Telefone:</label>
-            <input type="text" name="signup-tel" id="signup-tel" />
+            <div class="span-inp">
+              <input type="text" name="signup-name" id="signup-name" />
+              <span>Nome</span>
+            </div>
+            <div class="span-inp">
+              <input type="email" name="signup-email" id="signup-email" />
+              <span>E-mail</span>
+            </div>
+            <div class="span-inp">
+              <input type="text" name="signup-tel" id="signup-tel" />
+              <span>Telefone</span>
+            </div>
 
             <button class="btn-form-signup">Cadastrar</button>
           </form>
@@ -89,7 +95,5 @@
       <footer id="footer">EzPets - Todos os direitos reservados &copy; 2023</footer>
     </div>
     <script src="./js/index.js" type="module"></script>
-    <!-- Script Bootstrap -->
-    <script src="./node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
   </body>
 </html>

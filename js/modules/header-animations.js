@@ -6,8 +6,10 @@ export function hambAnim() {
     document.querySelector(".line2"),
     document.querySelector(".line3"),
   ];
+  const card = document.querySelector(".card-container");
   const navList = document.querySelector("#nav-list");
   menuHamb.addEventListener("click", () => {
+    card.classList.toggle("show-card");
     hambElements.forEach((el) => {
       el.classList.toggle("anim");
     });
