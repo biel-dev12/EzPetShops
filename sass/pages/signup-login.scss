@@ -186,12 +186,6 @@
         transform-style: preserve-3d;
         transition: all 1s ease;
       }
-      // &:hover .front {
-      //   transform: rotateY(-180deg);
-      // }
-      // &:hover .back {
-      //   transform: rotateY(0deg);
-      // }
       .front {
         @include front-back;
         transform: rotateY(0deg);
