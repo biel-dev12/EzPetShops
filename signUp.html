@@ -56,40 +56,27 @@
       <!--Form-->
       <main id="main-section">
         <div class="bg-pets"></div>
-        <div class="card-login-signup">
-          <!-- Sign Up Form -->
-         <div class="card-container">
-          <form action="" method="POST" id="form-signup-box" class="front">
-            <h3 id="form-title">Cadastre sua Pet Shop</h3>
-            <p class="form-subtitle">Sua vida mais easy!</p>
-
-            <div class="span-inp">
-              <input type="text" name="signup-name" id="signup-name" />
-              <span>Nome</span>
+        <div class="form-signup-login card-container show-card">  	
+          <input type="checkbox" id="chk" aria-hidden="true">
+      
+            <div class="register">
+              <form class="form">
+                <label for="chk" aria-hidden="true">Cadastre-se</label>
+                <input class="input" type="text" name="name" placeholder="Nome" required="">
+                <input class="input" type="email" name="email" placeholder="E-mail" required="">
+                <input class="input" type="text" name="tel" placeholder="Telefone" required="">
+                <button class="signup">Cadastrar</button>
+              </form>
             </div>
-            <div class="span-inp">
-              <input type="email" name="signup-email" id="signup-email" />
-              <span>E-mail</span>
+            
+            <div class="login">
+              <form class="form">
+                <label for="chk" aria-hidden="true">Entrar</label>
+                <input class="input" type="email" name="email" placeholder="E-mail" required="">
+                <input class="input" type="password" name="passw" placeholder="Password" required="">
+                <button class="login">Entrar</button>
+              </form>
             </div>
-            <div class="span-inp">
-              <input type="text" name="signup-tel" id="signup-tel" />
-              <span>Telefone</span>
-            </div>
-
-            <button class="btn-form-signup">Cadastrar</button>
-          </form>
-          <form action="" method="POST" id="form-login-box" class="back">
-            <h3 id="form-title">Log In do Pet Shop</h3>
-            <p class="form-subtitle">Sua vida mais easy!</p>
-
-            <label for="login-email">E-mail:</label>
-            <input type="email" name="login-email" id="login-email" />
-            <label for="login-pass">Senha:</label>
-            <input type="text" name="login-pass" id="login-pass" />
-
-            <button class="btn-form-login">Entrar</button>
-          </form>
-         </div>
         </div>
       </main>
       <footer id="footer">EzPets - Todos os direitos reservados &copy; 2023</footer>

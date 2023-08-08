@@ -72,9 +72,11 @@ body {
   opacity: 0.7;
 }
 #header #nav-header #nav-list li.li-drop {
+  height: 3rem;
   text-align: center;
 }
 #header #nav-header #nav-list li.li-drop span {
+  height: 100%;
   text-decoration: none;
   color: #fff;
   font-size: 1.1rem;
@@ -168,84 +170,113 @@ body {
 
 #main-section {
   height: 87vh;
-}
-#main-section .card-login-signup {
-  height: 100%;
   background-color: #FDE3A8;
   display: flex;
   justify-content: center;
   align-items: center;
 }
-#main-section .card-login-signup .card-container {
-  border-radius: 22px;
-  background: #ffffff;
-  box-shadow: 5px 5px 15px 8px rgba(0, 0, 0, 0.1);
-  height: 95%;
-  width: 80%;
+#main-section .form-signup-login {
+  width: 90%;
   position: relative;
-  perspective: 1000px;
-  opacity: 1;
-  transition: width 0.3s, opacity 0.2s;
-}
-#main-section .card-login-signup .card-container.show-card {
-  width: 0;
-  opacity: 0;
-  user-select: none;
-}
-#main-section .card-login-signup .card-container .front {
-  position: absolute;
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
-  transition: all 1s ease;
-  transform: rotateY(0deg);
-}
-#main-section .card-login-signup .card-container .back {
-  position: absolute;
-  backface-visibility: hidden;
-  transform-style: preserve-3d;
-  transition: all 1s ease;
-  transform: rotateY(180deg);
-}
-#main-section .card-login-signup .card-container form {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
+  background-color: #F27649;
+  max-height: 85%;
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: 7px 7px 20px 10px rgba(36, 0, 70, 0.1568627451);
+  transform: translateX(-150%);
+  transition: all 0.5s;
+}
+#main-section .form-signup-login.show-card {
+  transform: translateX(0%);
+}
+#main-section .form-signup-login #chk {
+  display: none;
+}
+#main-section .form-signup-login .register,
+#main-section .form-signup-login .login {
+  position: relative;
   width: 100%;
   height: 100%;
-  padding: 20px 50px;
 }
-#main-section .card-login-signup .card-container form .span-inp {
+#main-section .form-signup-login .register .form,
+#main-section .form-signup-login .login .form {
   display: flex;
   flex-direction: column;
+  gap: 14px;
+  padding: 24px;
+}
+#main-section .form-signup-login .register .form label,
+#main-section .form-signup-login .login .form label {
   width: 100%;
+  padding: 10px 0;
+  margin: 0 0 5%;
+  color: #fff;
+  font-size: 2.5rem;
+  justify-content: center;
+  display: flex;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.5s ease-in-out;
 }
-#main-section .card-login-signup .card-container form .span-inp input {
+#main-section .form-signup-login .register .form .input,
+#main-section .form-signup-login .login .form .input {
   width: 100%;
-  padding: 8px;
-  outline: none;
-  border: none;
-  color: #000;
-  font-size: 1em;
-  background: transparent;
-  border-left: 2px solid #000;
-  border-bottom: 2px solid #000;
-  transition: 0.1s;
-  border-bottom-left-radius: 8px;
-}
-#main-section .card-login-signup .card-container form .span-inp input:valid ~ span, #main-section .card-login-signup .card-container form .span-inp input:focus ~ span {
-  color: red;
-}
-#main-section .card-login-signup .card-container form .span-inp span {
-  font-size: 15px;
-  transform: translateY(-38px);
+  height: 40px;
+  background: #FDE3A8;
   padding: 10px;
-  pointer-events: none;
-  color: #000;
-  text-transform: uppercase;
-  transition: 0.5s;
-  letter-spacing: 2px;
-  border-radius: 8px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+}
+#main-section .form-signup-login .register .form button,
+#main-section .form-signup-login .login .form button {
+  background-color: transparent;
+  width: 85%;
+  height: 40px;
+  margin: 12px auto 10%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 2px solid #fff;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+#main-section .form-signup-login .register .form buttonsignup:hover,
+#main-section .form-signup-login .login .form buttonsignup:hover {
+  background-color: #fff;
+  color: #F27649;
+}
+#main-section .form-signup-login .register .form buttonlogin:hover,
+#main-section .form-signup-login .login .form buttonlogin:hover {
+  background-color: #fff;
+  color: #1190CB;
+}
+#main-section .form-signup-login .login {
+  top: 2px;
+  background: #1190CB;
+  border-top-left-radius: 15%;
+  border-top-right-radius: 15%;
+  transform: translateY(-8%);
+  transition: 0.8s ease-in-out;
+}
+#main-section .form-signup-login .login label {
+  position: relative;
+  bottom: 15px;
+  transform: scale(0.6);
+}
+#main-section .form-signup-login #chk:checked ~ .login {
+  transform: translateY(-90%);
+}
+#main-section .form-signup-login #chk:checked ~ .login label {
+  transform: scale(0.9);
+  bottom: 0px;
+}
+#main-section .form-signup-login #chk:checked ~ .register label {
+  transform: scale(0.6);
+  margin: 5% 0 5%;
 }
 
 #footer {
@@ -271,10 +302,6 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-}
-
-hr {
-  margin: 0 !important;
 }
 
 .logo:hover {

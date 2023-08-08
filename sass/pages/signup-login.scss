@@ -72,7 +72,9 @@
         @include linkEl;
       }
       li.li-drop {
+        height: 3rem;
         span {
+          height: 100%;
           @include linkEl;
         }
         text-align: center;
@@ -159,83 +161,108 @@
 
 #main-section {
   height: 87vh;
-  .card-login-signup {
-    height: 100%;
-    background-color: $terc-color;
+  background-color: $terc-color;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .form-signup-login {
+    width: 90%;
+    position: relative;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    .card-container {
-      border-radius: 22px;
-      background: #ffffff;
-      box-shadow: 5px 5px 15px 8px rgba(0, 0, 0, 0.1);
-      height: 95%;
-      width: 80%;
+    flex-direction: column;
+    background-color: $primary-color;
+    max-height: 85%;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 7px 7px 20px 10px #24004628;
+      transform: translateX(-150%);
+      transition: all .5s;
+    &.show-card{
+      transform: translateX(0%);
+    }
+    #chk {
+      display: none;
+    }
+    .register,
+    .login {
       position: relative;
-      perspective: 1000px;
-      opacity: 1;
-      transition: width 0.3s, opacity 0.2s;
-      &.show-card {
-        width: 0;
-        opacity: 0;
-        user-select: none;
-      }
-      @mixin front-back {
-        position: absolute;
-        backface-visibility: hidden;
-        transform-style: preserve-3d;
-        transition: all 1s ease;
-      }
-      .front {
-        @include front-back;
-        transform: rotateY(0deg);
-      }
-      .back {
-        @include front-back;
-        transform: rotateY(180deg);
-      }
-      form {
+      width: 100%;
+      height: 100%;
+      .form {
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        width: 100%;
-        height: 100%;
-        padding: 20px 50px;
-        .span-inp {
-          display: flex;
-          flex-direction: column;
+        gap: 14px;
+        padding: 24px;
+        label {
           width: 100%;
-          input {
-            width: 100%;
-            padding: 8px;
-            outline: none;
-            border: none;
-            color: #000;
-            font-size: 1em;
-            background: transparent;
-            border-left: 2px solid #000;
-            border-bottom: 2px solid #000;
-            transition: 0.1s;
-            border-bottom-left-radius: 8px;
-            &:valid ~ span,
-            &:focus ~ span {
-              color: red;
-            }
+          padding: 10px 0;
+          margin: 0 0 5%;
+          color: $white-text;
+          font-size: 2.5rem;
+          justify-content: center;
+          display: flex;
+          font-weight: bold;
+          cursor: pointer;
+          transition: 0.5s ease-in-out;
+        }
+        .input {
+          width: 100%;
+          height: 40px;
+          background: $terc-color;
+          padding: 10px;
+          border: none;
+          outline: none;
+          border-radius: 4px;
+        }
+        button {
+          background-color: transparent;
+          width: 85%;
+          height: 40px;
+          margin: 12px auto 10%;
+          color: $white-text;
+          font-size: 1rem;
+          font-weight: bold;
+          border: 2px solid $white-text;
+          border-radius: 4px;
+          cursor: pointer;
+          transition: 0.2s ease-in;
+          &signup:hover {
+            background-color: $white-text;
+            color: $primary-color;
           }
-          span {
-            font-size: 15px;
-            transform: translateY(-38px);
-            padding: 10px;
-            pointer-events: none;
-            color: #000;
-            text-transform: uppercase;
-            transition: 0.5s;
-            letter-spacing: 2px;
-            border-radius: 8px;
+          &login:hover {
+            background-color: $white-text;
+            color: $secondary-color;
           }
         }
       }
+    }
+
+    .login {
+      top: 2px;
+      background: $secondary-color;
+      border-top-left-radius: 15%;
+      border-top-right-radius: 15%;
+      transform: translateY(-8%);
+      transition: 0.8s ease-in-out;
+
+      label {
+        position: relative;
+        bottom: 15px;
+        transform: scale(0.6);
+      }
+      
+    }
+    #chk:checked ~ .login {
+      transform: translateY(-90%);
+      label{
+        transform: scale(0.9);
+        bottom: 0px;
+      }
+    }
+    #chk:checked ~ .register label {
+      transform: scale(0.6);
+      margin: 5% 0 5%;
     }
   }
 }
