@@ -160,7 +160,7 @@
 }
 
 #main-section {
-  height: 87vh;
+  height: 84vh;
   background-color: $terc-color;
   display: flex;
   justify-content: center;
@@ -171,7 +171,7 @@
     display: flex;
     flex-direction: column;
     background-color: $primary-color;
-    max-height: 85%;
+    height: 80%;
     overflow: hidden;
     border-radius: 12px;
     box-shadow: 7px 7px 20px 10px #24004628;
@@ -195,8 +195,8 @@
         padding: 24px;
         label {
           width: 100%;
-          padding: 10px 0;
-          margin: 0 0 5%;
+          // padding: 10px 0;
+          // margin: 0 0 5%;
           color: $white-text;
           font-size: 2.5rem;
           justify-content: center;
@@ -238,24 +238,32 @@
       }
     }
 
+    .register{
+      background-color: $primary-color;
+      text-align: center;
+      color: white;
+      font-weight: bold;
+      p{
+        transition: all .8s;
+        margin-bottom: 10px;
+      }
+    }
     .login {
-      top: 2px;
-      border-bottom: 100px solid $secondary-color;
       background: $secondary-color;
-      border-top-left-radius: 15%;
-      border-top-right-radius: 15%;
-      transform: translateY(-8%);
+      border-top-left-radius: 7%;
+      border-top-right-radius: 7%;
+      transform: translateY(-13%);
       transition: 0.8s ease-in-out;
-
       label {
         position: relative;
-        bottom: 15px;
+        bottom: 23px;
         transform: scale(0.6);
       }
-      
     }
     #chk:checked ~ .login {
-      transform: translateY(-70%);
+      transform: translateY(-85%);
+      border-top-left-radius: 15%;
+      border-top-right-radius: 15%;
       label{
         transform: scale(0.9);
         bottom: 0px;
@@ -263,11 +271,35 @@
     }
     #chk:checked ~ .register label {
       transform: scale(0.6);
-      margin: 5% 0 5%;
+      margin: 5% 0 1%;
+      +p{
+        transform: scale(1.5);
+      }
     }
   }
 }
 
 #footer {
-  height: 5vh;
+  height: 8vh;
 }
+
+@media (min-width: 377px) and (max-width: 415px){
+ #main-section{
+  .form-signup-login{
+    // height: 70%;
+    .register{
+      .form{
+        gap: 30px;
+      }
+    }
+    .login{
+      transform: translateY(5%);
+    }
+    #chk:checked ~ .login {
+      transform: translateY(-80%);
+  }
+  #chk:checked ~ .register {
+    filter: blur(1px);
+}
+ }
+}}

@@ -5,6 +5,50 @@ body {
   box-sizing: border-box;
 }
 
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*::after, *::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-content {
+  min-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo:hover {
+  animation: anim-logo 0.7s;
+}
+
+#main-section {
+  width: 100%;
+  flex: 1 0 auto;
+}
+
+@keyframes anim-logo {
+  0% {
+    transform: rotate(4deg);
+  }
+  25% {
+    transform: rotate(-4deg) scale(1.07);
+  }
+  50% {
+    transform: rotate(4deg);
+  }
+  100% {
+    transform: rotate(-4deg);
+  }
+}
 #header {
   width: 100%;
   height: 100%;
@@ -169,7 +213,7 @@ body {
 }
 
 #main-section {
-  height: 87vh;
+  height: 84vh;
   background-color: #FDE3A8;
   display: flex;
   justify-content: center;
@@ -181,7 +225,7 @@ body {
   display: flex;
   flex-direction: column;
   background-color: #F27649;
-  max-height: 85%;
+  height: 80%;
   overflow: hidden;
   border-radius: 12px;
   box-shadow: 7px 7px 20px 10px rgba(36, 0, 70, 0.1568627451);
@@ -210,8 +254,6 @@ body {
 #main-section .form-signup-login .register .form label,
 #main-section .form-signup-login .login .form label {
   width: 100%;
-  padding: 10px 0;
-  margin: 0 0 5%;
   color: #fff;
   font-size: 2.5rem;
   justify-content: center;
@@ -254,22 +296,32 @@ body {
   background-color: #fff;
   color: #1190CB;
 }
+#main-section .form-signup-login .register {
+  background-color: #F27649;
+  text-align: center;
+  color: white;
+  font-weight: bold;
+}
+#main-section .form-signup-login .register p {
+  transition: all 0.8s;
+  margin-bottom: 10px;
+}
 #main-section .form-signup-login .login {
-  top: 2px;
-  border-bottom: 100px solid #1190CB;
   background: #1190CB;
-  border-top-left-radius: 15%;
-  border-top-right-radius: 15%;
-  transform: translateY(-8%);
+  border-top-left-radius: 7%;
+  border-top-right-radius: 7%;
+  transform: translateY(-13%);
   transition: 0.8s ease-in-out;
 }
 #main-section .form-signup-login .login label {
   position: relative;
-  bottom: 15px;
+  bottom: 23px;
   transform: scale(0.6);
 }
 #main-section .form-signup-login #chk:checked ~ .login {
-  transform: translateY(-70%);
+  transform: translateY(-85%);
+  border-top-left-radius: 15%;
+  border-top-right-radius: 15%;
 }
 #main-section .form-signup-login #chk:checked ~ .login label {
   transform: scale(0.9);
@@ -277,55 +329,28 @@ body {
 }
 #main-section .form-signup-login #chk:checked ~ .register label {
   transform: scale(0.6);
-  margin: 5% 0 5%;
+  margin: 5% 0 1%;
+}
+#main-section .form-signup-login #chk:checked ~ .register label + p {
+  transform: scale(1.5);
 }
 
 #footer {
-  height: 5vh;
+  height: 8vh;
 }
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-*::after, *::before {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.main-content {
-  min-width: 100vw;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-}
-
-.logo:hover {
-  animation: anim-logo 0.7s;
-}
-
-#main-section {
-  width: 100%;
-  flex: 1 0 auto;
-}
-
-@keyframes anim-logo {
-  0% {
-    transform: rotate(4deg);
+@media (min-width: 377px) and (max-width: 415px) {
+  #main-section .form-signup-login .register .form {
+    gap: 30px;
   }
-  25% {
-    transform: rotate(-4deg) scale(1.07);
+  #main-section .form-signup-login .login {
+    transform: translateY(5%);
   }
-  50% {
-    transform: rotate(4deg);
+  #main-section .form-signup-login #chk:checked ~ .login {
+    transform: translateY(-80%);
   }
-  100% {
-    transform: rotate(-4deg);
+  #main-section .form-signup-login #chk:checked ~ .register {
+    filter: blur(1px);
   }
 }
 
