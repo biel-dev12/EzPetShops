@@ -137,7 +137,7 @@ button {
 #header #nav-header #nav-list li.li-drop .dropdown {
   margin-top: 10px;
   z-index: -1;
-  max-height: 0;
+  height: 0;
   user-select: none;
   width: 18rem;
   background-color: #fff;
@@ -150,7 +150,7 @@ button {
 }
 #header #nav-header #nav-list li.li-drop .dropdown.show {
   z-index: 2;
-  max-height: 18rem;
+  height: 11.5rem;
   box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
 }
 #header #nav-header #nav-list li.li-drop .dropdown .item {
@@ -218,11 +218,16 @@ button {
 }
 
 #main-section {
+  width: 100vw;
   height: 84vh;
   background-color: #FDE3A8;
   display: flex;
   justify-content: center;
   align-items: center;
+  gap: 100px;
+}
+#main-section .bg-pets {
+  display: none;
 }
 #main-section .form-signup-login {
   background-color: #F27649;
@@ -375,6 +380,61 @@ button {
 
 #footer {
   height: 8vh;
+}
+
+@media only screen and (min-width: 900px) {
+  #header {
+    padding: 10px 30px;
+  }
+  #header #nav-header .menu-hamb {
+    display: none;
+  }
+  #header #nav-header #nav-list {
+    flex-direction: row;
+    position: static;
+    height: 100%;
+    width: 80%;
+    transform: translateX(0);
+    background-color: transparent;
+    justify-content: space-between;
+  }
+  #header #nav-header #nav-list a.li-option {
+    color: #000;
+  }
+  #header #nav-header #nav-list li.li-drop {
+    width: auto;
+    height: 200px;
+    display: grid;
+    grid-template-rows: 0.5fr 3fr;
+    grid-template-areas: "span" "drop";
+    position: relative;
+    top: 190%;
+  }
+  #header #nav-header #nav-list li.li-drop span {
+    grid-area: span;
+    color: #000;
+  }
+  #header #nav-header #nav-list li.li-drop .dropdown {
+    grid-area: drop;
+  }
+  #header #nav-header #nav-list ul#ul-btns {
+    flex-direction: row;
+  }
+  #header #nav-header #nav-list ul#ul-btns li > button.btn-login:hover {
+    border-color: #1190CB;
+  }
+  #header #nav-header #nav-list ul#ul-btns li > button.btn-signup:hover {
+    background-color: #fff;
+  }
+  #main-section .bg-pets {
+    display: block;
+    width: 40%;
+    height: 100%;
+    background-image: url("../../imgs/bgPets.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
