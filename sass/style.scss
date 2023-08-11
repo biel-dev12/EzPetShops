@@ -39,6 +39,10 @@ body{
   flex: 1 0 auto;
 }
 
+button{
+  outline: none;
+}
+
 @keyframes anim-logo {
     0%{
       transform: rotate(4deg);

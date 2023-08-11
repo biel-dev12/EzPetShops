@@ -35,6 +35,10 @@ body {
   flex: 1 0 auto;
 }
 
+button {
+  outline: none;
+}
+
 @keyframes anim-logo {
   0% {
     transform: rotate(4deg);
@@ -192,6 +196,7 @@ body {
   font-size: 16px;
   color: #fff;
   transition: all 0.5s;
+  cursor: pointer;
 }
 #header #nav-header #nav-list ul#ul-btns li > button.btn-login {
   background-color: #1190CB;

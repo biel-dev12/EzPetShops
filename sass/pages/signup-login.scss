@@ -135,6 +135,7 @@
           font-size: 16px;
           color: $white-text;
           transition: all 0.5s;
+          cursor: pointer;
           &.btn-login {
             background-color: $secondary-color;
             border-color: $white-text;
