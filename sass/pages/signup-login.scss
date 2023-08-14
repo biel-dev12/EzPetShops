@@ -74,11 +74,14 @@
       li.li-drop {
         height: 3rem;
         span {
+        position: relative;
+        bottom: 31%;
           height: 100%;
           @include linkEl;
         }
         text-align: center;
         .dropdown {
+          position: relative;
           margin-top: 10px;
           z-index: -1;
           height: 0;
@@ -119,6 +122,7 @@
         }
       }
       @include nav-ul;
+      gap: 30px;
       &.show-nav {
         transition: all 0.5s;
         transform: translateX(0%);
@@ -162,6 +166,9 @@
 
 #main-section {
   width: 100vw;
+  // height: 84vh;
+  flex-grow: 1;
+  flex-basis: 84vh;
   height: 84vh;
   background-color: $terc-color;
   display: flex;

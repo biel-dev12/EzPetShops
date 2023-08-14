@@ -30,11 +30,6 @@ body {
   animation: anim-logo 0.7s;
 }
 
-#main-section {
-  width: 100%;
-  flex: 1 0 auto;
-}
-
 button {
   outline: none;
 }
@@ -108,6 +103,7 @@ button {
   justify-content: space-evenly;
   align-items: center;
   padding-left: 0;
+  gap: 30px;
 }
 #header #nav-header #nav-list a.li-option {
   text-decoration: none;
@@ -124,6 +120,8 @@ button {
   text-align: center;
 }
 #header #nav-header #nav-list li.li-drop span {
+  position: relative;
+  bottom: 31%;
   height: 100%;
   text-decoration: none;
   color: #fff;
@@ -135,6 +133,7 @@ button {
   opacity: 0.7;
 }
 #header #nav-header #nav-list li.li-drop .dropdown {
+  position: relative;
   margin-top: 10px;
   z-index: -1;
   height: 0;
@@ -219,6 +218,8 @@ button {
 
 #main-section {
   width: 100vw;
+  flex-grow: 1;
+  flex-basis: 84vh;
   height: 84vh;
   background-color: #FDE3A8;
   display: flex;
