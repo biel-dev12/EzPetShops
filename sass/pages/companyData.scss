@@ -1,0 +1,17 @@
+@import "../outhers/colors.scss";
+
+#header{
+    #nav-header{
+        gap: 100px;
+        padding: 20px;
+    }    
+}
+
+#main-section{
+    .form1{
+        width: 85%;
+        height: 95%;
+        background-color: $white-text;
+        border-radius: 2%;
+    }
+}

@@ -22,6 +22,7 @@
 #header {
   width: 100%;
   height: 100%;
+  background-color: $white-text;
   #nav-header {
     display: flex;
     justify-content: space-evenly;
@@ -74,8 +75,8 @@
       li.li-drop {
         height: 3rem;
         span {
-        position: relative;
-        bottom: 31%;
+          position: relative;
+          bottom: 31%;
           height: 100%;
           @include linkEl;
         }
@@ -308,9 +309,9 @@
           height: 200px;
           display: grid;
           grid-template-rows: calc(1fr / 2) 3fr;
-          grid-template-areas: 
-          "span"
-          "drop";
+          grid-template-areas:
+            "span"
+            "drop";
           // flex-direction: column;
           // gap: 200px;
           position: relative;
@@ -319,20 +320,20 @@
             grid-area: span;
             color: $black-text;
           }
-          .dropdown{
+          .dropdown {
             grid-area: drop;
           }
         }
-        ul#ul-btns{
+        ul#ul-btns {
           flex-direction: row;
           li > button {
-            &.btn-login{
-              &:hover{
+            &.btn-login {
+              &:hover {
                 border-color: $secondary-color;
               }
             }
-            &.btn-signup{
-              &:hover{
+            &.btn-signup {
+              &:hover {
                 background-color: $white-text;
               }
             }

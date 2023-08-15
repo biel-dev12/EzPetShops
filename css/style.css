@@ -51,6 +51,7 @@ button {
 #header {
   width: 100%;
   height: 100%;
+  background-color: #fff;
 }
 #header #nav-header {
   display: flex;
@@ -436,6 +437,17 @@ button {
     background-size: cover;
     background-position: left;
   }
+}
+#header #nav-header {
+  gap: 100px;
+  padding: 20px;
+}
+
+#main-section .form1 {
+  width: 85%;
+  height: 95%;
+  background-color: #fff;
+  border-radius: 2%;
 }
 
 /*# sourceMappingURL=style.css.map */

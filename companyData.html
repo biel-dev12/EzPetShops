@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dados da Empresa</title>
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="./css/style.css" />
+    <link
+      rel="shortcut icon"
+      href="./imgs/logo-ezpets.svg"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <div class="main-content">
+      <header id="header">
+        <nav id="nav-header">
+          <a href="" class="arrowBac-link">
+            <img
+              src="./imgs/chevron-left.svg"
+              alt="Icone Voltar"
+              class="arowBack"
+            />
+          </a>
+          <a href="" class="link-logo"
+            ><img src="./imgs/logo-ezpets.svg" alt="Logo EzPets" class="logo"
+          /></a>
+        </nav>
+      </header>
+      <main id="main-section">
+        <form class="form1" action="" method="post">
+          <div class="corpoDatas">
+            <h2>Preencha alguns dados sobre seu Pet Shop:</h2>
+
+            <label for="corpName">Razão Social:</label>
+            <input type="text" name="corpName" id="corpName" />
+
+            <label for="petshopName"
+              >Nome Fantasia (como aparecerá para seus clientes):</label
+            >
+            <input
+              type="text"
+              name="petshop Name"
+              id="petshopName"
+              placeholder="Ex: Pet Shop do João"
+            />
+
+            <label for="cnpj">CNPJ: </label>
+            <input
+              type="text"
+              name="cnpj"
+              id="cnpj"
+              placeholder="XX.XXX.XXX/XXXX-XX"
+            />
+          </div>
+          <div class="corpAddress">
+            <h2>Agora nos informe o endereço:</h2>
+
+            <label for="cep">CEP:</label>
+            <input type="text" name="cep" id="cep" placeholder="XXXXX-XXX">
+
+            <label for="street">Rua:</label>
+            <input type="text" name="street" id="street">
+
+            <label for="number">Número:</label>
+            <input type="text" name="number id="number">
+
+            <label for="neighbor">Bairro:</label>
+            <input type="text" name="neighbor" id="neighbor">
+
+            <label for="city">Cidade:</label>
+            <input type="text" name="city" id="city">
+
+            <label for="state">Cidade:</label>
+            <input type="text" name="state" id="state">
+          </div>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>
