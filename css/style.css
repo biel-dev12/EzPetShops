@@ -444,10 +444,76 @@ button {
 }
 
 #main-section .form1 {
-  width: 85%;
+  width: 92%;
   height: 95%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+}
+#main-section .form1 .corpDatas {
   background-color: #fff;
-  border-radius: 2%;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-height: auto;
+  padding: 25px 20px;
+  gap: 30px;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.3);
+}
+#main-section .form1 .corpDatas h2 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+#main-section .form1 .corpDatas .div-inputs {
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+#main-section .form1 .corpDatas .div-inputs .inps {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+#main-section .form1 .corpDatas .div-inputs .inps input {
+  height: 30px;
+  font-size: 1.1rem;
+  outline: 1px solid #F27649;
+}
+#main-section .form1 .corpAddress {
+  background-color: #fff;
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  max-height: auto;
+  padding: 25px 20px;
+  gap: 30px;
+  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.3);
+}
+#main-section .form1 .corpAddress h2 {
+  text-align: center;
+  font-size: 1.5rem;
+}
+#main-section .form1 .corpAddress .div-inputs {
+  font-size: 1.2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+#main-section .form1 .corpAddress .div-inputs .inps {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+#main-section .form1 .corpAddress .div-inputs .inps input {
+  height: 30px;
+  font-size: 1.1rem;
+  outline: 1px solid #F27649;
 }
 
 /*# sourceMappingURL=style.css.map */

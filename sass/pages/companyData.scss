@@ -1,17 +1,60 @@
 @import "../outhers/colors.scss";
 
-#header{
-    #nav-header{
-        gap: 100px;
-        padding: 20px;
-    }    
+#header {
+  #nav-header {
+    gap: 100px;
+    padding: 20px;
+  }
 }
 
-#main-section{
-    .form1{
-        width: 85%;
-        height: 95%;
-        background-color: $white-text;
-        border-radius: 2%;
+#main-section {
+  .form1 {
+    width: 92%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    @mixin formDivs {
+      background-color: $white-text;
+      border-radius: 15px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      max-height: auto; 
+      padding: 25px 20px;
+      gap: 30px;
+      box-shadow: 1px 1px 10px 1px rgba(#000, 0.3);
+      h2{
+        text-align: center;
+        font-size: 1.5rem;
+      }
+      .div-inputs{
+        font-size: 1.2rem;
+        display: flex;
+        flex-direction: column;
+        gap: 18px;
+        .inps{
+            display: flex;
+            flex-direction: column;
+            gap: 5px;
+            label{
+
+            }
+            input{
+                height: 30px;
+                font-size: 1.1rem;
+                outline: 1px solid $primary-color;
+            }
+        }
+      }
     }
+    .corpDatas {
+        @include formDivs;
+    }
+    .corpAddress{
+        @include formDivs;
+    }
+  }
 }
