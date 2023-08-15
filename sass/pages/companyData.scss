@@ -8,13 +8,13 @@
 }
 
 #main-section {
+  height: 100%;
   .form1 {
     width: 92%;
     height: 95%;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    align-items: center;
     @mixin formDivs {
       background-color: $white-text;
       border-radius: 15px;
@@ -22,39 +22,66 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      max-height: auto; 
+      max-height: auto;
       padding: 25px 20px;
       gap: 30px;
       box-shadow: 1px 1px 10px 1px rgba(#000, 0.3);
-      h2{
+      h2 {
         text-align: center;
         font-size: 1.5rem;
       }
-      .div-inputs{
+      .div-inputs {
         font-size: 1.2rem;
         display: flex;
         flex-direction: column;
-        gap: 18px;
-        .inps{
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-            label{
-
+        gap: 30px;
+        .inps {
+          display: flex;
+          flex-direction: column-reverse;
+          gap: 10px;
+          label {
+            font-size: 1.3rem;
+            width: fit-content;
+            cursor: pointer;
+            &::after{
+              content: "";
+              display: block;
+              width: 0%;
+              height: 1px;
+              background-color: $black-text;
+              transition: all .5s;
             }
-            input{
-                height: 30px;
-                font-size: 1.1rem;
-                outline: 1px solid $primary-color;
+          }
+          input {
+            letter-spacing: 1px;
+            height: 30px;
+            font-size: 1.05rem;
+            padding: 15px 7px;
+            outline: none;
+            border: 0.15rem solid $primary-color;
+            border-radius: 10px;
+            transition: all 0.5s;
+            &:focus{
+              border-color: $secondary-color;
+              ~ label::after {
+                width: 100%
+              }
+              &.active-focus{
+              border-color: $secondary-color;
+                ~ label::after {
+                  width: 100%
+                }
+              }
             }
+          }
         }
       }
     }
     .corpDatas {
-        @include formDivs;
+      @include formDivs;
     }
-    .corpAddress{
-        @include formDivs;
+    .corpAddress {
+      @include formDivs;
     }
   }
 }

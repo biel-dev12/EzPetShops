@@ -443,13 +443,15 @@ button {
   padding: 20px;
 }
 
+#main-section {
+  height: 100%;
+}
 #main-section .form1 {
   width: 92%;
   height: 95%;
   display: flex;
   flex-direction: column;
   gap: 10px;
-  align-items: center;
 }
 #main-section .form1 .corpDatas {
   background-color: #fff;
@@ -471,17 +473,47 @@ button {
   font-size: 1.2rem;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 30px;
 }
 #main-section .form1 .corpDatas .div-inputs .inps {
   display: flex;
-  flex-direction: column;
-  gap: 5px;
+  flex-direction: column-reverse;
+  gap: 10px;
+}
+#main-section .form1 .corpDatas .div-inputs .inps label, #main-section .form1 .corpDatas .div-inputs .inps .form-signup-login .register .form p, #main-section .form-signup-login .register .form .form1 .corpDatas .div-inputs .inps p, #main-section .form1 .corpDatas .div-inputs .inps .form-signup-login .login .form p, #main-section .form-signup-login .login .form .form1 .corpDatas .div-inputs .inps p {
+  font-size: 1.3rem;
+  width: fit-content;
+  cursor: pointer;
+}
+#main-section .form1 .corpDatas .div-inputs .inps label::after, #main-section .form1 .corpDatas .div-inputs .inps .form-signup-login .register .form p::after, #main-section .form-signup-login .register .form .form1 .corpDatas .div-inputs .inps p::after, #main-section .form1 .corpDatas .div-inputs .inps .form-signup-login .login .form p::after, #main-section .form-signup-login .login .form .form1 .corpDatas .div-inputs .inps p::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 1px;
+  background-color: #000;
+  transition: all 0.5s;
 }
 #main-section .form1 .corpDatas .div-inputs .inps input {
+  letter-spacing: 1px;
   height: 30px;
-  font-size: 1.1rem;
-  outline: 1px solid #F27649;
+  font-size: 1.05rem;
+  padding: 15px 7px;
+  outline: none;
+  border: 0.15rem solid #F27649;
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+#main-section .form1 .corpDatas .div-inputs .inps input:focus {
+  border-color: #1190CB;
+}
+#main-section .form1 .corpDatas .div-inputs .inps input:focus ~ label::after, #main-section .form1 .corpDatas .div-inputs .inps .form-signup-login .register .form input:focus ~ p::after, #main-section .form-signup-login .register .form .form1 .corpDatas .div-inputs .inps input:focus ~ p::after, #main-section .form1 .corpDatas .div-inputs .inps .form-signup-login .login .form input:focus ~ p::after, #main-section .form-signup-login .login .form .form1 .corpDatas .div-inputs .inps input:focus ~ p::after {
+  width: 100%;
+}
+#main-section .form1 .corpDatas .div-inputs .inps input:focus.active-focus {
+  border-color: #1190CB;
+}
+#main-section .form1 .corpDatas .div-inputs .inps input:focus.active-focus ~ label::after, #main-section .form1 .corpDatas .div-inputs .inps .form-signup-login .register .form input:focus.active-focus ~ p::after, #main-section .form-signup-login .register .form .form1 .corpDatas .div-inputs .inps input:focus.active-focus ~ p::after, #main-section .form1 .corpDatas .div-inputs .inps .form-signup-login .login .form input:focus.active-focus ~ p::after, #main-section .form-signup-login .login .form .form1 .corpDatas .div-inputs .inps input:focus.active-focus ~ p::after {
+  width: 100%;
 }
 #main-section .form1 .corpAddress {
   background-color: #fff;
@@ -503,17 +535,47 @@ button {
   font-size: 1.2rem;
   display: flex;
   flex-direction: column;
-  gap: 18px;
+  gap: 30px;
 }
 #main-section .form1 .corpAddress .div-inputs .inps {
   display: flex;
-  flex-direction: column;
-  gap: 5px;
+  flex-direction: column-reverse;
+  gap: 10px;
+}
+#main-section .form1 .corpAddress .div-inputs .inps label, #main-section .form1 .corpAddress .div-inputs .inps .form-signup-login .register .form p, #main-section .form-signup-login .register .form .form1 .corpAddress .div-inputs .inps p, #main-section .form1 .corpAddress .div-inputs .inps .form-signup-login .login .form p, #main-section .form-signup-login .login .form .form1 .corpAddress .div-inputs .inps p {
+  font-size: 1.3rem;
+  width: fit-content;
+  cursor: pointer;
+}
+#main-section .form1 .corpAddress .div-inputs .inps label::after, #main-section .form1 .corpAddress .div-inputs .inps .form-signup-login .register .form p::after, #main-section .form-signup-login .register .form .form1 .corpAddress .div-inputs .inps p::after, #main-section .form1 .corpAddress .div-inputs .inps .form-signup-login .login .form p::after, #main-section .form-signup-login .login .form .form1 .corpAddress .div-inputs .inps p::after {
+  content: "";
+  display: block;
+  width: 0%;
+  height: 1px;
+  background-color: #000;
+  transition: all 0.5s;
 }
 #main-section .form1 .corpAddress .div-inputs .inps input {
+  letter-spacing: 1px;
   height: 30px;
-  font-size: 1.1rem;
-  outline: 1px solid #F27649;
+  font-size: 1.05rem;
+  padding: 15px 7px;
+  outline: none;
+  border: 0.15rem solid #F27649;
+  border-radius: 10px;
+  transition: all 0.5s;
+}
+#main-section .form1 .corpAddress .div-inputs .inps input:focus {
+  border-color: #1190CB;
+}
+#main-section .form1 .corpAddress .div-inputs .inps input:focus ~ label::after, #main-section .form1 .corpAddress .div-inputs .inps .form-signup-login .register .form input:focus ~ p::after, #main-section .form-signup-login .register .form .form1 .corpAddress .div-inputs .inps input:focus ~ p::after, #main-section .form1 .corpAddress .div-inputs .inps .form-signup-login .login .form input:focus ~ p::after, #main-section .form-signup-login .login .form .form1 .corpAddress .div-inputs .inps input:focus ~ p::after {
+  width: 100%;
+}
+#main-section .form1 .corpAddress .div-inputs .inps input:focus.active-focus {
+  border-color: #1190CB;
+}
+#main-section .form1 .corpAddress .div-inputs .inps input:focus.active-focus ~ label::after, #main-section .form1 .corpAddress .div-inputs .inps .form-signup-login .register .form input:focus.active-focus ~ p::after, #main-section .form-signup-login .register .form .form1 .corpAddress .div-inputs .inps input:focus.active-focus ~ p::after, #main-section .form1 .corpAddress .div-inputs .inps .form-signup-login .login .form input:focus.active-focus ~ p::after, #main-section .form-signup-login .login .form .form1 .corpAddress .div-inputs .inps input:focus.active-focus ~ p::after {
+  width: 100%;
 }
 
 /*# sourceMappingURL=style.css.map */
