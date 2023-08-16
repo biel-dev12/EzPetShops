@@ -6,7 +6,7 @@
   flex-direction: column;
   justify-content: space-evenly;
   align-items: center;
-  padding-left: 0;
+  // padding-left: 0;
 }
 @mixin linkEl {
   text-decoration: none;
@@ -21,14 +21,16 @@
 
 #header {
   width: 100%;
-  height: 100%;
+  height: 8vh;
   background-color: $white-text;
   #nav-header {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     background-color: $white-text;
-    height: 8vh;
+    height: 100%;
+    gap: 0px!important;
+    padding: 10px 20px!important;
     a.link-logo {
       .logo {
         width: 40%;
@@ -167,10 +169,9 @@
 
 #main-section {
   width: 100vw;
-  // height: 84vh;
   flex-grow: 1;
   flex-basis: 84vh;
-  height: 84vh;
+  // height: 84vh;
   background-color: $terc-color;
   display: flex;
   justify-content: center;
@@ -344,9 +345,12 @@
   }
 
   #main-section {
+    justify-content: space-around;
+    gap: 0;
+    padding-right: 20px;
     .bg-pets {
       display: block;
-      width: 40%;
+      min-width: 55%;
       height: 100%;
       background-image: url("../../imgs/bgPets.svg");
       background-repeat: no-repeat;

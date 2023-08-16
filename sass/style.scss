@@ -1,58 +1,71 @@
-body{
+body {
   overflow-x: hidden;
   padding: 0;
   margin: 0;
-  box-sizing: border-box
+  box-sizing: border-box;
 }
 
 @import "./outhers/colors.scss";
 
-
-*{
+* {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
-*::after, *::before{
+*::after,
+*::before {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
 .main-content {
-  min-width: 100vw;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  width: 100vw;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-template-rows: 8vh 84vh 8vh;
+  gap: 0px 0px;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+}
+
+#header {
+  grid-area: header;
+}
+
+#main-section {
+  grid-area: main;
+}
+
+#footer {
+  grid-area: footer;
 }
 
 .logo {
   &:hover {
-    animation: anim-logo .7s;
+    animation: anim-logo 0.7s;
   }
 }
 
-button{
+button {
   outline: none;
 }
 
 @keyframes anim-logo {
-    0%{
-      transform: rotate(4deg);
-    }
-    25%{
-        transform: rotate(-4deg) scale(1.07);
-    }
-    50%{
-      transform: rotate(4deg);
-    }
-    100%{
-        transform: rotate(-4deg);
-        
-    }
-    
+  0% {
+    transform: rotate(4deg);
+  }
+  25% {
+    transform: rotate(-4deg) scale(1.07);
+  }
+  50% {
+    transform: rotate(4deg);
+  }
+  100% {
+    transform: rotate(-4deg);
+  }
 }
 
 @import "./pages/signup-login.scss";
