@@ -1,9 +1,4 @@
-body {
-  overflow-x: hidden;
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
+html, body{padding: 0;margin: 0;box-sizing: border-box; overflow-x: hidden; overflow-y: auto}
 
 @import "./outhers/colors.scss";
 
@@ -20,27 +15,17 @@ body {
 }
 
 .main-content {
+  overflow-x: hidden;
   width: 100vw;
+  height: 100vh;
   display: grid;
   grid-template-columns: 100%;
-  grid-template-rows: 8vh 84vh 8vh;
   gap: 0px 0px;
+  grid-template-rows: 8vh 84vh 8vh;
   grid-template-areas:
     "header"
     "main"
     "footer";
-}
-
-#header {
-  grid-area: header;
-}
-
-#main-section {
-  grid-area: main;
-}
-
-#footer {
-  grid-area: footer;
 }
 
 .logo {

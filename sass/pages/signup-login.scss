@@ -19,9 +19,15 @@
   }
 }
 
+.main-content{
+  grid-template-rows: 8vh 84vh 8vh;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
 #header {
   width: 100%;
-  height: 8vh;
+  grid-area: header;
   background-color: $white-text;
   #nav-header {
     display: flex;
@@ -168,10 +174,8 @@
 }
 
 #main-section {
-  width: 100vw;
-  flex-grow: 1;
-  flex-basis: 84vh;
-  // height: 84vh;
+  width: 100%;
+  grid-area: main;
   background-color: $terc-color;
   display: flex;
   justify-content: center;
@@ -284,78 +288,82 @@
 }
 
 #footer {
-  height: 8vh;
+  width: 100%;
+  grid-area: footer;
+}
 }
 
 @media only screen and (min-width: 900px) {
-  #header {
-    padding: 10px 30px;
-    #nav-header {
-      .menu-hamb {
-        display: none;
-      }
-      #nav-list {
-        flex-direction: row;
-        position: static;
-        height: 100%;
-        width: 80%;
-        transform: translateX(0);
-        background-color: transparent;
-        justify-content: space-between;
-        a.li-option {
-          color: $black-text;
+  .main-content{
+    #header {
+      padding: 10px 30px;
+      #nav-header {
+        .menu-hamb {
+          display: none;
         }
-        li.li-drop {
-          width: auto;
-          height: 200px;
-          display: grid;
-          grid-template-rows: calc(1fr / 2) 3fr;
-          grid-template-areas:
-            "span"
-            "drop";
-          // flex-direction: column;
-          // gap: 200px;
-          position: relative;
-          top: 190%;
-          span {
-            grid-area: span;
+        #nav-list {
+          flex-direction: row;
+          position: static;
+          height: 100%;
+          width: 80%;
+          transform: translateX(0);
+          background-color: transparent;
+          justify-content: space-between;
+          a.li-option {
             color: $black-text;
           }
-          .dropdown {
-            grid-area: drop;
-          }
-        }
-        ul#ul-btns {
-          flex-direction: row;
-          li > button {
-            &.btn-login {
-              &:hover {
-                border-color: $secondary-color;
-              }
+          li.li-drop {
+            width: auto;
+            height: 200px;
+            display: grid;
+            grid-template-rows: calc(1fr / 2) 3fr;
+            grid-template-areas:
+              "span"
+              "drop";
+            // flex-direction: column;
+            // gap: 200px;
+            position: relative;
+            top: 190%;
+            span {
+              grid-area: span;
+              color: $black-text;
             }
-            &.btn-signup {
-              &:hover {
-                background-color: $white-text;
+            .dropdown {
+              grid-area: drop;
+            }
+          }
+          ul#ul-btns {
+            flex-direction: row;
+            li > button {
+              &.btn-login {
+                &:hover {
+                  border-color: $secondary-color;
+                }
+              }
+              &.btn-signup {
+                &:hover {
+                  background-color: $white-text;
+                }
               }
             }
           }
         }
       }
     }
-  }
-
-  #main-section {
-    justify-content: space-around;
-    gap: 0;
-    padding-right: 20px;
-    .bg-pets {
-      display: block;
-      min-width: 55%;
-      height: 100%;
-      background-image: url("../../imgs/bgPets.svg");
-      background-repeat: no-repeat;
-      background-size: cover;
-      background-position: left;
+  
+    #main-section {
+      justify-content: space-around;
+      gap: 0;
+      padding-right: 20px;
+      .bg-pets {
+        display: block;
+        min-width: 55%;
+        height: 100%;
+        background-image: url("../../imgs/bgPets.svg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: left;
+      }
     }
   }
 }
