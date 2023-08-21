@@ -20,11 +20,14 @@
 }
 
 .main-content{
+  grid-template-columns: 100%;
+  gap: 0px 0px;
   grid-template-rows: 8vh 84vh 8vh;
   grid-template-areas:
     "header"
     "main"
     "footer";
+}
 #header {
   width: 100%;
   grid-area: header;
@@ -290,7 +293,6 @@
 #footer {
   width: 100%;
   grid-area: footer;
-}
 }
 
 @media only screen and (min-width: 900px) {

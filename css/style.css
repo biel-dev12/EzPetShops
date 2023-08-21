@@ -24,10 +24,6 @@ html, body {
   width: 100vw;
   height: 100vh;
   display: grid;
-  grid-template-columns: 100%;
-  gap: 0px 0px;
-  grid-template-rows: 8vh 84vh 8vh;
-  grid-template-areas: "header" "main" "footer";
 }
 
 .logo:hover {
@@ -53,15 +49,18 @@ button {
   }
 }
 .main-content {
+  grid-template-columns: 100%;
+  gap: 0px 0px;
   grid-template-rows: 8vh 84vh 8vh;
   grid-template-areas: "header" "main" "footer";
 }
-.main-content #header {
+
+#header {
   width: 100%;
   grid-area: header;
   background-color: #fff;
 }
-.main-content #header #nav-header {
+#header #nav-header {
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -70,11 +69,11 @@ button {
   gap: 0px !important;
   padding: 10px 20px !important;
 }
-.main-content #header #nav-header a.link-logo .logo {
+#header #nav-header a.link-logo .logo {
   width: 40%;
   height: auto;
 }
-.main-content #header #nav-header .menu-hamb {
+#header #nav-header .menu-hamb {
   width: 32px;
   height: 32px;
   display: flex;
@@ -82,23 +81,23 @@ button {
   flex-direction: column;
   justify-content: space-around;
 }
-.main-content #header #nav-header .menu-hamb div {
+#header #nav-header .menu-hamb div {
   width: 100%;
   height: 2px;
   background-color: black;
   transition: all 0.3s;
 }
-.main-content #header #nav-header .menu-hamb div.line1.anim {
+#header #nav-header .menu-hamb div.line1.anim {
   transform: translateY(11px) rotate(-45deg);
 }
-.main-content #header #nav-header .menu-hamb div.line2.anim {
+#header #nav-header .menu-hamb div.line2.anim {
   transition: all 0.2s;
   width: 0;
 }
-.main-content #header #nav-header .menu-hamb div.line3.anim {
+#header #nav-header .menu-hamb div.line3.anim {
   transform: translateY(-11px) rotate(45deg);
 }
-.main-content #header #nav-header #nav-list {
+#header #nav-header #nav-list {
   position: absolute;
   top: 8vh;
   right: 0;
@@ -115,21 +114,21 @@ button {
   align-items: center;
   gap: 30px;
 }
-.main-content #header #nav-header #nav-list a.li-option {
+#header #nav-header #nav-list a.li-option {
   text-decoration: none;
   color: #fff;
   font-size: 1.1rem;
   font-weight: bold;
   cursor: pointer;
 }
-.main-content #header #nav-header #nav-list a.li-option:hover {
+#header #nav-header #nav-list a.li-option:hover {
   opacity: 0.7;
 }
-.main-content #header #nav-header #nav-list li.li-drop {
+#header #nav-header #nav-list li.li-drop {
   height: 3rem;
   text-align: center;
 }
-.main-content #header #nav-header #nav-list li.li-drop span {
+#header #nav-header #nav-list li.li-drop span {
   position: relative;
   bottom: 31%;
   height: 100%;
@@ -139,10 +138,10 @@ button {
   font-weight: bold;
   cursor: pointer;
 }
-.main-content #header #nav-header #nav-list li.li-drop span:hover {
+#header #nav-header #nav-list li.li-drop span:hover {
   opacity: 0.7;
 }
-.main-content #header #nav-header #nav-list li.li-drop .dropdown {
+#header #nav-header #nav-list li.li-drop .dropdown {
   position: relative;
   margin-top: 10px;
   z-index: -1;
@@ -154,39 +153,39 @@ button {
   overflow: hidden;
   transition: all 0.3s;
 }
-.main-content #header #nav-header #nav-list li.li-drop .dropdown:hover {
+#header #nav-header #nav-list li.li-drop .dropdown:hover {
   opacity: 1;
 }
-.main-content #header #nav-header #nav-list li.li-drop .dropdown.show {
+#header #nav-header #nav-list li.li-drop .dropdown.show {
   z-index: 2;
   height: 11.5rem;
   box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.5);
 }
-.main-content #header #nav-header #nav-list li.li-drop .dropdown .item {
+#header #nav-header #nav-list li.li-drop .dropdown .item {
   padding: 10px 10px;
   width: 100%;
   text-align: left;
   transition: all 0.3s;
 }
-.main-content #header #nav-header #nav-list li.li-drop .dropdown .item:hover {
+#header #nav-header #nav-list li.li-drop .dropdown .item:hover {
   background-color: rgba(0, 0, 0, 0.1);
   cursor: pointer;
 }
-.main-content #header #nav-header #nav-list li.li-drop .dropdown .item-title {
+#header #nav-header #nav-list li.li-drop .dropdown .item-title {
   font-size: 23px;
   color: #F27649;
   font-weight: bold;
   padding-bottom: 5px;
 }
-.main-content #header #nav-header #nav-list li.li-drop .dropdown .item-text {
+#header #nav-header #nav-list li.li-drop .dropdown .item-text {
   color: rgb(71, 71, 71);
   font-weight: bold;
 }
-.main-content #header #nav-header #nav-list.show-nav {
+#header #nav-header #nav-list.show-nav {
   transition: all 0.5s;
   transform: translateX(0%);
 }
-.main-content #header #nav-header #nav-list ul#ul-btns {
+#header #nav-header #nav-list ul#ul-btns {
   display: flex;
   list-style: none !important;
   gap: 10px;
@@ -194,7 +193,7 @@ button {
   justify-content: space-evenly;
   align-items: center;
 }
-.main-content #header #nav-header #nav-list ul#ul-btns li > button {
+#header #nav-header #nav-list ul#ul-btns li > button {
   border: none;
   width: 7rem;
   border-radius: 5px;
@@ -206,25 +205,26 @@ button {
   transition: all 0.5s;
   cursor: pointer;
 }
-.main-content #header #nav-header #nav-list ul#ul-btns li > button.btn-login {
+#header #nav-header #nav-list ul#ul-btns li > button.btn-login {
   background-color: #1190CB;
   border-color: #fff;
   color: #fff;
 }
-.main-content #header #nav-header #nav-list ul#ul-btns li > button.btn-login:hover {
+#header #nav-header #nav-list ul#ul-btns li > button.btn-login:hover {
   background-color: #fff;
   border: 2px solid #fff;
   color: #1190CB;
 }
-.main-content #header #nav-header #nav-list ul#ul-btns li > button.btn-signup {
+#header #nav-header #nav-list ul#ul-btns li > button.btn-signup {
   background-color: #F27649;
 }
-.main-content #header #nav-header #nav-list ul#ul-btns li > button.btn-signup:hover {
+#header #nav-header #nav-list ul#ul-btns li > button.btn-signup:hover {
   background-color: #1190CB;
   border: 2px solid #F27649;
   color: #F27649;
 }
-.main-content #main-section {
+
+#main-section {
   width: 100%;
   grid-area: main;
   background-color: #FDE3A8;
@@ -233,10 +233,10 @@ button {
   align-items: center;
   gap: 100px;
 }
-.main-content #main-section .bg-pets {
+#main-section .bg-pets {
   display: none;
 }
-.main-content #main-section .form-signup-login {
+#main-section .form-signup-login {
   background-color: #F27649;
   max-width: 90%;
   height: 95%;
@@ -246,19 +246,19 @@ button {
   transform: translateX(-150%);
   transition: all 0.5s;
 }
-.main-content #main-section .form-signup-login.show-card {
+#main-section .form-signup-login.show-card {
   transform: translateX(0%);
 }
-.main-content #main-section .form-signup-login .register {
+#main-section .form-signup-login .register {
   max-width: 100%;
   height: 100%;
   transition: all 0.4s;
   background-color: #F27649;
 }
-.main-content #main-section .form-signup-login .register.remove-register {
+#main-section .form-signup-login .register.remove-register {
   transform: translateY(-101%);
 }
-.main-content #main-section .form-signup-login .register .form {
+#main-section .form-signup-login .register .form {
   max-width: 100%;
   height: 100%;
   transition: all 0.4s;
@@ -269,16 +269,16 @@ button {
   gap: 14px;
   padding: 24px;
 }
-.main-content #main-section .form-signup-login .register .form label, .main-content #main-section .form-signup-login .register .form p {
+#main-section .form-signup-login .register .form label, #main-section .form-signup-login .register .form p {
   width: 100%;
   color: #fff;
   font-size: 2.5rem;
   font-weight: bold;
 }
-.main-content #main-section .form-signup-login .register .form p {
+#main-section .form-signup-login .register .form p {
   font-size: 1.5rem;
 }
-.main-content #main-section .form-signup-login .register .form .input {
+#main-section .form-signup-login .register .form .input {
   width: 100%;
   height: 40px;
   background: whitesmoke;
@@ -287,7 +287,7 @@ button {
   outline: none;
   border-radius: 4px;
 }
-.main-content #main-section .form-signup-login .register .form button {
+#main-section .form-signup-login .register .form button {
   background-color: transparent;
   width: 85%;
   height: 40px;
@@ -300,31 +300,31 @@ button {
   cursor: pointer;
   transition: 0.2s ease-in;
 }
-.main-content #main-section .form-signup-login .register .form button.signup:hover {
+#main-section .form-signup-login .register .form button.signup:hover {
   background-color: #fff;
   color: #F27649;
 }
-.main-content #main-section .form-signup-login .register .form button + p {
+#main-section .form-signup-login .register .form button + p {
   font-size: 1.1rem;
 }
-.main-content #main-section .form-signup-login .register .form button + p span.link-login {
+#main-section .form-signup-login .register .form button + p span.link-login {
   text-decoration: underline;
   cursor: pointer;
 }
-.main-content #main-section .form-signup-login .register .form button + p span.link-login:hover {
+#main-section .form-signup-login .register .form button + p span.link-login:hover {
   opacity: 0.7;
 }
-.main-content #main-section .form-signup-login .login {
+#main-section .form-signup-login .login {
   max-width: 100%;
   height: 100%;
   transition: all 0.4s;
   background-color: #1190CB;
   transform: translateY(101%);
 }
-.main-content #main-section .form-signup-login .login.show-login {
+#main-section .form-signup-login .login.show-login {
   transform: translateY(-100%);
 }
-.main-content #main-section .form-signup-login .login .form {
+#main-section .form-signup-login .login .form {
   max-width: 100%;
   height: 100%;
   transition: all 0.4s;
@@ -335,16 +335,16 @@ button {
   gap: 14px;
   padding: 24px;
 }
-.main-content #main-section .form-signup-login .login .form label, .main-content #main-section .form-signup-login .login .form p {
+#main-section .form-signup-login .login .form label, #main-section .form-signup-login .login .form p {
   width: 100%;
   color: #fff;
   font-size: 2.5rem;
   font-weight: bold;
 }
-.main-content #main-section .form-signup-login .login .form p {
+#main-section .form-signup-login .login .form p {
   font-size: 1.5rem;
 }
-.main-content #main-section .form-signup-login .login .form .input {
+#main-section .form-signup-login .login .form .input {
   width: 100%;
   height: 40px;
   background: whitesmoke;
@@ -353,7 +353,7 @@ button {
   outline: none;
   border-radius: 4px;
 }
-.main-content #main-section .form-signup-login .login .form button {
+#main-section .form-signup-login .login .form button {
   background-color: transparent;
   width: 85%;
   height: 40px;
@@ -366,25 +366,26 @@ button {
   cursor: pointer;
   transition: 0.2s ease-in;
 }
-.main-content #main-section .form-signup-login .login .form button.signup:hover {
+#main-section .form-signup-login .login .form button.signup:hover {
   background-color: #fff;
   color: #F27649;
 }
-.main-content #main-section .form-signup-login .login .form button + p {
+#main-section .form-signup-login .login .form button + p {
   font-size: 1.1rem;
 }
-.main-content #main-section .form-signup-login .login .form button + p span.link-login {
+#main-section .form-signup-login .login .form button + p span.link-login {
   text-decoration: underline;
   cursor: pointer;
 }
-.main-content #main-section .form-signup-login .login .form button + p span.link-login:hover {
+#main-section .form-signup-login .login .form button + p span.link-login:hover {
   opacity: 0.7;
 }
-.main-content #main-section .form-signup-login .login .form .link-signup {
+#main-section .form-signup-login .login .form .link-signup {
   text-decoration: underline;
   cursor: pointer;
 }
-.main-content #footer {
+
+#footer {
   width: 100%;
   grid-area: footer;
 }
@@ -448,6 +449,14 @@ button {
     background-position: left;
   }
 }
+.main-content2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 8vh 100%;
+  gap: 0px 0px;
+  grid-template-areas: "header" "main";
+}
+
 #header #nav-header {
   gap: 100px;
   padding: 20px;
@@ -463,7 +472,7 @@ button {
   flex-direction: column;
   gap: 10px;
 }
-#main-section .form1 .corpDatas {
+#main-section .corpDatas {
   background-color: #fff;
   border-radius: 15px;
   display: flex;
@@ -475,27 +484,27 @@ button {
   gap: 30px;
   box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.3);
 }
-#main-section .form1 .corpDatas h2 {
+#main-section .corpDatas h2 {
   text-align: center;
   font-size: 1.5rem;
 }
-#main-section .form1 .corpDatas .div-inputs {
+#main-section .corpDatas .div-inputs {
   font-size: 1.2rem;
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
-#main-section .form1 .corpDatas .div-inputs .inps {
+#main-section .corpDatas .div-inputs .inps {
   display: flex;
   flex-direction: column-reverse;
   gap: 10px;
 }
-#main-section .form1 .corpDatas .div-inputs .inps label, .main-content #main-section .form1 .corpDatas .div-inputs .inps .form-signup-login .register .form p, .main-content #main-section .form-signup-login .register .form .form1 .corpDatas .div-inputs .inps p, .main-content #main-section .form1 .corpDatas .div-inputs .inps .form-signup-login .login .form p, .main-content #main-section .form-signup-login .login .form .form1 .corpDatas .div-inputs .inps p {
+#main-section .corpDatas .div-inputs .inps label, #main-section .corpDatas .div-inputs .inps .form-signup-login .register .form p, #main-section .form-signup-login .register .form .corpDatas .div-inputs .inps p, #main-section .corpDatas .div-inputs .inps .form-signup-login .login .form p, #main-section .form-signup-login .login .form .corpDatas .div-inputs .inps p {
   font-size: 1.3rem;
   width: fit-content;
   cursor: pointer;
 }
-#main-section .form1 .corpDatas .div-inputs .inps label::after, .main-content #main-section .form1 .corpDatas .div-inputs .inps .form-signup-login .register .form p::after, .main-content #main-section .form-signup-login .register .form .form1 .corpDatas .div-inputs .inps p::after, .main-content #main-section .form1 .corpDatas .div-inputs .inps .form-signup-login .login .form p::after, .main-content #main-section .form-signup-login .login .form .form1 .corpDatas .div-inputs .inps p::after {
+#main-section .corpDatas .div-inputs .inps label::after, #main-section .corpDatas .div-inputs .inps .form-signup-login .register .form p::after, #main-section .form-signup-login .register .form .corpDatas .div-inputs .inps p::after, #main-section .corpDatas .div-inputs .inps .form-signup-login .login .form p::after, #main-section .form-signup-login .login .form .corpDatas .div-inputs .inps p::after {
   content: "";
   display: block;
   width: 0%;
@@ -503,7 +512,7 @@ button {
   background-color: #000;
   transition: all 0.5s;
 }
-#main-section .form1 .corpDatas .div-inputs .inps input {
+#main-section .corpDatas .div-inputs .inps input {
   letter-spacing: 1px;
   height: 30px;
   font-size: 1.05rem;
@@ -513,19 +522,14 @@ button {
   border-radius: 10px;
   transition: all 0.5s;
 }
-#main-section .form1 .corpDatas .div-inputs .inps input:focus {
+#main-section .corpDatas .div-inputs .inps input.active-inp {
   border-color: #1190CB;
 }
-#main-section .form1 .corpDatas .div-inputs .inps input:focus ~ label::after, .main-content #main-section .form1 .corpDatas .div-inputs .inps .form-signup-login .register .form input:focus ~ p::after, .main-content #main-section .form-signup-login .register .form .form1 .corpDatas .div-inputs .inps input:focus ~ p::after, .main-content #main-section .form1 .corpDatas .div-inputs .inps .form-signup-login .login .form input:focus ~ p::after, .main-content #main-section .form-signup-login .login .form .form1 .corpDatas .div-inputs .inps input:focus ~ p::after {
+#main-section .corpDatas .div-inputs .inps input.active-inp ~ label::after, #main-section .corpDatas .div-inputs .inps .form-signup-login .register .form input.active-inp ~ p::after, #main-section .form-signup-login .register .form .corpDatas .div-inputs .inps input.active-inp ~ p::after, #main-section .corpDatas .div-inputs .inps .form-signup-login .login .form input.active-inp ~ p::after, #main-section .form-signup-login .login .form .corpDatas .div-inputs .inps input.active-inp ~ p::after {
   width: 100%;
 }
-#main-section .form1 .corpDatas .div-inputs .inps input:focus.active-focus {
-  border-color: #1190CB;
-}
-#main-section .form1 .corpDatas .div-inputs .inps input:focus.active-focus ~ label::after, .main-content #main-section .form1 .corpDatas .div-inputs .inps .form-signup-login .register .form input:focus.active-focus ~ p::after, .main-content #main-section .form-signup-login .register .form .form1 .corpDatas .div-inputs .inps input:focus.active-focus ~ p::after, .main-content #main-section .form1 .corpDatas .div-inputs .inps .form-signup-login .login .form input:focus.active-focus ~ p::after, .main-content #main-section .form-signup-login .login .form .form1 .corpDatas .div-inputs .inps input:focus.active-focus ~ p::after {
-  width: 100%;
-}
-#main-section .form1 .corpAddress {
+#main-section .corpAddress {
+  display: grid;
   background-color: #fff;
   border-radius: 15px;
   display: flex;
@@ -537,27 +541,27 @@ button {
   gap: 30px;
   box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.3);
 }
-#main-section .form1 .corpAddress h2 {
+#main-section .corpAddress h2 {
   text-align: center;
   font-size: 1.5rem;
 }
-#main-section .form1 .corpAddress .div-inputs {
+#main-section .corpAddress .div-inputs {
   font-size: 1.2rem;
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
-#main-section .form1 .corpAddress .div-inputs .inps {
+#main-section .corpAddress .div-inputs .inps {
   display: flex;
   flex-direction: column-reverse;
   gap: 10px;
 }
-#main-section .form1 .corpAddress .div-inputs .inps label, .main-content #main-section .form1 .corpAddress .div-inputs .inps .form-signup-login .register .form p, .main-content #main-section .form-signup-login .register .form .form1 .corpAddress .div-inputs .inps p, .main-content #main-section .form1 .corpAddress .div-inputs .inps .form-signup-login .login .form p, .main-content #main-section .form-signup-login .login .form .form1 .corpAddress .div-inputs .inps p {
+#main-section .corpAddress .div-inputs .inps label, #main-section .corpAddress .div-inputs .inps .form-signup-login .register .form p, #main-section .form-signup-login .register .form .corpAddress .div-inputs .inps p, #main-section .corpAddress .div-inputs .inps .form-signup-login .login .form p, #main-section .form-signup-login .login .form .corpAddress .div-inputs .inps p {
   font-size: 1.3rem;
   width: fit-content;
   cursor: pointer;
 }
-#main-section .form1 .corpAddress .div-inputs .inps label::after, .main-content #main-section .form1 .corpAddress .div-inputs .inps .form-signup-login .register .form p::after, .main-content #main-section .form-signup-login .register .form .form1 .corpAddress .div-inputs .inps p::after, .main-content #main-section .form1 .corpAddress .div-inputs .inps .form-signup-login .login .form p::after, .main-content #main-section .form-signup-login .login .form .form1 .corpAddress .div-inputs .inps p::after {
+#main-section .corpAddress .div-inputs .inps label::after, #main-section .corpAddress .div-inputs .inps .form-signup-login .register .form p::after, #main-section .form-signup-login .register .form .corpAddress .div-inputs .inps p::after, #main-section .corpAddress .div-inputs .inps .form-signup-login .login .form p::after, #main-section .form-signup-login .login .form .corpAddress .div-inputs .inps p::after {
   content: "";
   display: block;
   width: 0%;
@@ -565,7 +569,7 @@ button {
   background-color: #000;
   transition: all 0.5s;
 }
-#main-section .form1 .corpAddress .div-inputs .inps input {
+#main-section .corpAddress .div-inputs .inps input {
   letter-spacing: 1px;
   height: 30px;
   font-size: 1.05rem;
@@ -575,16 +579,10 @@ button {
   border-radius: 10px;
   transition: all 0.5s;
 }
-#main-section .form1 .corpAddress .div-inputs .inps input:focus {
+#main-section .corpAddress .div-inputs .inps input.active-inp {
   border-color: #1190CB;
 }
-#main-section .form1 .corpAddress .div-inputs .inps input:focus ~ label::after, .main-content #main-section .form1 .corpAddress .div-inputs .inps .form-signup-login .register .form input:focus ~ p::after, .main-content #main-section .form-signup-login .register .form .form1 .corpAddress .div-inputs .inps input:focus ~ p::after, .main-content #main-section .form1 .corpAddress .div-inputs .inps .form-signup-login .login .form input:focus ~ p::after, .main-content #main-section .form-signup-login .login .form .form1 .corpAddress .div-inputs .inps input:focus ~ p::after {
-  width: 100%;
-}
-#main-section .form1 .corpAddress .div-inputs .inps input:focus.active-focus {
-  border-color: #1190CB;
-}
-#main-section .form1 .corpAddress .div-inputs .inps input:focus.active-focus ~ label::after, .main-content #main-section .form1 .corpAddress .div-inputs .inps .form-signup-login .register .form input:focus.active-focus ~ p::after, .main-content #main-section .form-signup-login .register .form .form1 .corpAddress .div-inputs .inps input:focus.active-focus ~ p::after, .main-content #main-section .form1 .corpAddress .div-inputs .inps .form-signup-login .login .form input:focus.active-focus ~ p::after, .main-content #main-section .form-signup-login .login .form .form1 .corpAddress .div-inputs .inps input:focus.active-focus ~ p::after {
+#main-section .corpAddress .div-inputs .inps input.active-inp ~ label::after, #main-section .corpAddress .div-inputs .inps .form-signup-login .register .form input.active-inp ~ p::after, #main-section .form-signup-login .register .form .corpAddress .div-inputs .inps input.active-inp ~ p::after, #main-section .corpAddress .div-inputs .inps .form-signup-login .login .form input.active-inp ~ p::after, #main-section .form-signup-login .login .form .corpAddress .div-inputs .inps input.active-inp ~ p::after {
   width: 100%;
 }
 
