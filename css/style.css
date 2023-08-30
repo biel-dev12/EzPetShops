@@ -281,14 +281,13 @@ button {
 #main-section .form-signup-login .register .form .input {
   width: 100%;
   height: 40px;
-  background: whitesmoke;
+  background: rgb(245, 245, 245);
   padding: 10px;
   border: none;
   outline: none;
   border-radius: 4px;
 }
 #main-section .form-signup-login .register .form button {
-  background-color: transparent;
   width: 85%;
   height: 40px;
   margin: 12px auto 10%;
@@ -347,14 +346,13 @@ button {
 #main-section .form-signup-login .login .form .input {
   width: 100%;
   height: 40px;
-  background: whitesmoke;
+  background: rgb(245, 245, 245);
   padding: 10px;
   border: none;
   outline: none;
   border-radius: 4px;
 }
 #main-section .form-signup-login .login .form button {
-  background-color: transparent;
   width: 85%;
   height: 40px;
   margin: 12px auto 10%;
@@ -415,8 +413,8 @@ button {
     display: grid;
     grid-template-rows: 0.5fr 3fr;
     grid-template-areas: "span" "drop";
-    position: relative;
-    top: 190%;
+    align-self: self-start;
+    margin-top: 5px;
   }
   .main-content #header #nav-header #nav-list li.li-drop span {
     grid-area: span;
@@ -452,59 +450,100 @@ button {
 .main-content2 {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: 8vh 100%;
+  grid-template-rows: 8vh 92vh;
   gap: 0px 0px;
   grid-template-areas: "header" "main";
 }
 
-#header #nav-header {
-  gap: 100px;
-  padding: 20px;
+#header {
+  grid-area: header;
+}
+#header #nav-header2 {
+  background-color: #FDE3A8;
+  padding: 0 30px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  justify-content: space-between;
+  gap: 70px;
+}
+#header #nav-header2 a.link-logo .logo {
+  width: 50%;
+  height: auto;
 }
 
-#main-section {
+#main-section2 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: main;
   height: 100%;
+  background-color: #fff;
 }
-#main-section .form1 {
+#main-section2 #stepForm {
   width: 92%;
   height: 95%;
   display: flex;
   flex-direction: column;
   gap: 10px;
 }
-#main-section .corpDatas {
-  background-color: #fff;
-  border-radius: 15px;
-  display: flex;
+#main-section2 #stepForm .form-step {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 30px 25px;
+  border-radius: 20px;
+  background: #ffffff;
+  box-shadow: 6px 6px 23px #a3a3a3, -6px -6px 23px #ffffff;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
-  max-height: auto;
-  padding: 25px 20px;
-  gap: 30px;
-  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.3);
+  gap: 10px;
 }
-#main-section .corpDatas h2 {
+#main-section2 #stepForm .form-step h2 {
+  font-size: 2rem;
   text-align: center;
-  font-size: 1.5rem;
+  letter-spacing: 2px;
 }
-#main-section .corpDatas .div-inputs {
-  font-size: 1.2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-#main-section .corpDatas .div-inputs .inps {
+#main-section2 #stepForm .form-step .inps {
+  height: auto;
   display: flex;
   flex-direction: column-reverse;
   gap: 10px;
+  justify-content: center;
+  align-items: center;
 }
-#main-section .corpDatas .div-inputs .inps label, #main-section .corpDatas .div-inputs .inps .form-signup-login .register .form p, #main-section .form-signup-login .register .form .corpDatas .div-inputs .inps p, #main-section .corpDatas .div-inputs .inps .form-signup-login .login .form p, #main-section .form-signup-login .login .form .corpDatas .div-inputs .inps p {
+#main-section2 #stepForm .form-step .inps.small-inps {
+  flex-direction: row;
+}
+#main-section2 #stepForm .form-step .inps.small-inps .box-small-inps {
+  display: flex;
+  flex-direction: column-reverse;
+}
+#main-section2 #stepForm .form-step .inps.small-inps input {
+  width: 11rem;
+}
+#main-section2 #stepForm .form-step .inps.small-inps input#neighborh {
+  width: 15rem;
+}
+#main-section2 #stepForm .form-step .inps.small-inps input#number {
+  width: 7rem;
+}
+#main-section2 #stepForm .form-step .inps span {
+  align-self: self-start;
+  color: rgb(255, 0, 0);
+}
+#main-section2 #stepForm .form-step .inps label, #main-section2 #stepForm .form-step .inps #main-section .form-signup-login .register .form p, #main-section .form-signup-login .register .form #main-section2 #stepForm .form-step .inps p, #main-section2 #stepForm .form-step .inps #main-section .form-signup-login .login .form p, #main-section .form-signup-login .login .form #main-section2 #stepForm .form-step .inps p {
   font-size: 1.3rem;
   width: fit-content;
   cursor: pointer;
+  align-self: self-start;
+  transition: all 0.5s;
 }
-#main-section .corpDatas .div-inputs .inps label::after, #main-section .corpDatas .div-inputs .inps .form-signup-login .register .form p::after, #main-section .form-signup-login .register .form .corpDatas .div-inputs .inps p::after, #main-section .corpDatas .div-inputs .inps .form-signup-login .login .form p::after, #main-section .form-signup-login .login .form .corpDatas .div-inputs .inps p::after {
+#main-section2 #stepForm .form-step .inps label::after, #main-section2 #stepForm .form-step .inps #main-section .form-signup-login .register .form p::after, #main-section .form-signup-login .register .form #main-section2 #stepForm .form-step .inps p::after, #main-section2 #stepForm .form-step .inps #main-section .form-signup-login .login .form p::after, #main-section .form-signup-login .login .form #main-section2 #stepForm .form-step .inps p::after {
   content: "";
   display: block;
   width: 0%;
@@ -512,78 +551,67 @@ button {
   background-color: #000;
   transition: all 0.5s;
 }
-#main-section .corpDatas .div-inputs .inps input {
+#main-section2 #stepForm .form-step .inps input {
+  width: 22rem;
   letter-spacing: 1px;
-  height: 30px;
-  font-size: 1.05rem;
-  padding: 15px 7px;
+  height: 32px;
+  font-size: 1.07em;
+  padding: 18px 10px;
   outline: none;
-  border: 0.15rem solid #F27649;
-  border-radius: 10px;
-  transition: all 0.5s;
+  border: 0.1rem solid #F27649;
+  border-radius: 8px;
 }
-#main-section .corpDatas .div-inputs .inps input.active-inp {
-  border-color: #1190CB;
+#main-section2 #stepForm .form-step .inps input.error {
+  border: 2px solid rgb(255, 0, 0);
 }
-#main-section .corpDatas .div-inputs .inps input.active-inp ~ label::after, #main-section .corpDatas .div-inputs .inps .form-signup-login .register .form input.active-inp ~ p::after, #main-section .form-signup-login .register .form .corpDatas .div-inputs .inps input.active-inp ~ p::after, #main-section .corpDatas .div-inputs .inps .form-signup-login .login .form input.active-inp ~ p::after, #main-section .form-signup-login .login .form .corpDatas .div-inputs .inps input.active-inp ~ p::after {
+#main-section2 #stepForm .form-step .inps input.error ~ label, #main-section2 #stepForm .form-step .inps #main-section .form-signup-login .register .form input.error ~ p, #main-section .form-signup-login .register .form #main-section2 #stepForm .form-step .inps input.error ~ p, #main-section2 #stepForm .form-step .inps #main-section .form-signup-login .login .form input.error ~ p, #main-section .form-signup-login .login .form #main-section2 #stepForm .form-step .inps input.error ~ p {
+  color: rgb(255, 0, 0);
+  font-weight: 500;
+}
+#main-section2 #stepForm .form-step .inps input.error ~ label::after, #main-section2 #stepForm .form-step .inps #main-section .form-signup-login .register .form input.error ~ p::after, #main-section .form-signup-login .register .form #main-section2 #stepForm .form-step .inps input.error ~ p::after, #main-section2 #stepForm .form-step .inps #main-section .form-signup-login .login .form input.error ~ p::after, #main-section .form-signup-login .login .form #main-section2 #stepForm .form-step .inps input.error ~ p::after {
+  background-color: rgb(255, 0, 0);
+}
+#main-section2 #stepForm .form-step .inps input.valid {
+  border: 1px solid #1190CB;
+}
+#main-section2 #stepForm .form-step .inps input:focus ~ label::after, #main-section2 #stepForm .form-step .inps #main-section .form-signup-login .register .form input:focus ~ p::after, #main-section .form-signup-login .register .form #main-section2 #stepForm .form-step .inps input:focus ~ p::after, #main-section2 #stepForm .form-step .inps #main-section .form-signup-login .login .form input:focus ~ p::after, #main-section .form-signup-login .login .form #main-section2 #stepForm .form-step .inps input:focus ~ p::after {
   width: 100%;
 }
-#main-section .corpAddress {
-  display: grid;
-  background-color: #fff;
-  border-radius: 15px;
+#main-section2 #stepForm .form-step .btns-step {
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
-  max-height: auto;
-  padding: 25px 20px;
-  gap: 30px;
-  box-shadow: 1px 1px 10px 1px rgba(0, 0, 0, 0.3);
+  gap: 5px;
 }
-#main-section .corpAddress h2 {
-  text-align: center;
-  font-size: 1.5rem;
-}
-#main-section .corpAddress .div-inputs {
-  font-size: 1.2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 30px;
-}
-#main-section .corpAddress .div-inputs .inps {
-  display: flex;
-  flex-direction: column-reverse;
-  gap: 10px;
-}
-#main-section .corpAddress .div-inputs .inps label, #main-section .corpAddress .div-inputs .inps .form-signup-login .register .form p, #main-section .form-signup-login .register .form .corpAddress .div-inputs .inps p, #main-section .corpAddress .div-inputs .inps .form-signup-login .login .form p, #main-section .form-signup-login .login .form .corpAddress .div-inputs .inps p {
-  font-size: 1.3rem;
-  width: fit-content;
+#main-section2 #stepForm .form-step .btns-step button {
+  width: 85%;
+  height: 40px;
+  margin: 12px auto 10%;
+  color: #fff;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 2px solid #fff;
+  border-radius: 4px;
   cursor: pointer;
+  transition: 0.2s ease-in;
+  width: 10rem;
+  height: 3rem;
 }
-#main-section .corpAddress .div-inputs .inps label::after, #main-section .corpAddress .div-inputs .inps .form-signup-login .register .form p::after, #main-section .form-signup-login .register .form .corpAddress .div-inputs .inps p::after, #main-section .corpAddress .div-inputs .inps .form-signup-login .login .form p::after, #main-section .form-signup-login .login .form .corpAddress .div-inputs .inps p::after {
-  content: "";
-  display: block;
-  width: 0%;
-  height: 1px;
-  background-color: #000;
-  transition: all 0.5s;
+#main-section2 #stepForm .form-step .btns-step button.next-button {
+  background-color: #F27649;
 }
-#main-section .corpAddress .div-inputs .inps input {
-  letter-spacing: 1px;
-  height: 30px;
-  font-size: 1.05rem;
-  padding: 15px 7px;
-  outline: none;
-  border: 0.15rem solid #F27649;
-  border-radius: 10px;
-  transition: all 0.5s;
+#main-section2 #stepForm .form-step .btns-step button.next-button:hover {
+  background-color: #fff;
+  border: 2px solid #F27649;
+  color: #F27649;
 }
-#main-section .corpAddress .div-inputs .inps input.active-inp {
-  border-color: #1190CB;
+#main-section2 #stepForm .form-step .btns-step button.prev-button {
+  background-color: #1190CB;
 }
-#main-section .corpAddress .div-inputs .inps input.active-inp ~ label::after, #main-section .corpAddress .div-inputs .inps .form-signup-login .register .form input.active-inp ~ p::after, #main-section .form-signup-login .register .form .corpAddress .div-inputs .inps input.active-inp ~ p::after, #main-section .corpAddress .div-inputs .inps .form-signup-login .login .form input.active-inp ~ p::after, #main-section .form-signup-login .login .form .corpAddress .div-inputs .inps input.active-inp ~ p::after {
-  width: 100%;
+#main-section2 #stepForm .form-step .btns-step button.prev-button:hover {
+  background-color: #fff;
+  border: 2px solid #1190CB;
+  color: #1190CB;
 }
 
 /*# sourceMappingURL=style.css.map */

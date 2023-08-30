@@ -19,6 +19,19 @@
   }
 }
 
+@mixin btns{
+  width: 85%;
+  height: 40px;
+  margin: 12px auto 10%;
+  color: $white-text;
+  font-size: 1rem;
+  font-weight: bold;
+  border: 2px solid $white-text;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.2s ease-in;
+}
+
 .main-content{
   grid-template-columns: 100%;
   gap: 0px 0px;
@@ -231,17 +244,7 @@
         border-radius: 4px;
       }
       button {
-        background-color: transparent;
-        width: 85%;
-        height: 40px;
-        margin: 12px auto 10%;
-        color: $white-text;
-        font-size: 1rem;
-        font-weight: bold;
-        border: 2px solid $white-text;
-        border-radius: 4px;
-        cursor: pointer;
-        transition: 0.2s ease-in;
+        @include btns;
         &.signup:hover {
           background-color: $white-text;
           color: $primary-color;
@@ -322,10 +325,8 @@
             grid-template-areas:
               "span"
               "drop";
-            // flex-direction: column;
-            // gap: 200px;
-            position: relative;
-            top: 190%;
+              align-self: self-start;
+              margin-top: 5px;
             span {
               grid-area: span;
               color: $black-text;

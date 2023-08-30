@@ -1,90 +1,172 @@
 @import "../outhers/colors.scss";
-@mixin formDivs {
-  background-color: $white-text;
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  max-height: auto;
-  padding: 25px 20px;
-  gap: 30px;
-  box-shadow: 1px 1px 10px 1px rgba(#000, 0.3);
-  h2 {
-    text-align: center;
-    font-size: 1.5rem;
-  }
-  .div-inputs {
-    font-size: 1.2rem;
+@mixin inps {
+  .inps {
+    height: auto;
     display: flex;
-    flex-direction: column;
-    gap: 30px;
-    .inps {
-      display: flex;
-      flex-direction: column-reverse;
-      gap: 10px;
-      label {
-        font-size: 1.3rem;
-        width: fit-content;
-        cursor: pointer;
-        &::after {
-          content: "";
-          display: block;
-          width: 0%;
-          height: 1px;
-          background-color: $black-text;
-          transition: all 0.5s;
+    flex-direction: column-reverse;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    &.small-inps{
+      flex-direction: row;
+      .box-small-inps{
+        display: flex;
+        flex-direction: column-reverse;
+      }
+      input{
+        width: 11rem;
+        &#neighborh{
+          width: 15rem;
+        }
+        &#number{
+          width: 7rem;
         }
       }
-      input {
-        letter-spacing: 1px;
-        height: 30px;
-        font-size: 1.05rem;
-        padding: 15px 7px;
-        outline: none;
-        border: 0.15rem solid $primary-color;
-        border-radius: 10px;
+    }
+    span{
+      align-self: self-start;
+      color: $red-color;
+    }
+    label{
+      font-size: 1.3rem;
+      width: fit-content;
+      cursor: pointer;
+      align-self: self-start;
+      transition: all .5s;
+      &::after {
+        content: "";
+        display: block;
+        width: 0%;
+        height: 1px;
+        background-color: $black-text;
         transition: all 0.5s;
-        &.active-inp {
-          border-color: $secondary-color;
-          ~ label::after {
-            width: 100%;
+      }
+    
+    }
+    input {
+      width: 22rem;
+      letter-spacing: 1px;
+      height: 32px;
+      font-size: 1.07em;
+      padding: 18px 10px;
+      outline: none;
+      border: 0.1rem solid $primary-color;
+      border-radius: 8px;
+      // transition: all 0.5s;
+      &.error {
+        border: 2px solid $red-color;
+        ~ label{
+          color: $red-color;
+          font-weight: 500;
+          &::after{
+            background-color: $red-color;
           }
         }
       }
+      &.valid{
+        border: 1px solid $secondary-color;
+      }
+      &:focus ~ label{
+        &::after{
+          width: 100%;
+        }
+      }
     }
   }
 }
-.main-content2{
-  display: grid; 
-  grid-template-columns: 1fr; 
-  grid-template-rows: 8vh 100%; 
-  gap: 0px 0px; 
-  grid-template-areas: 
-    "header"
-    "main"; 
-}
-  #header {
-    #nav-header {
-      gap: 100px;
-      padding: 20px;
-    }
-  }
 
-  #main-section {
-    height: 100%;
-    .form1 {
-      width: 92%;
-      height: 95%;
-      display: flex;
+@mixin formsStep{
+  width: 100%;
+      height: 100%;
+      overflow: hidden;
+      padding: 30px 25px;
+      border-radius: 20px;
+      background: #ffffff;
+      box-shadow: 6px 6px 23px #a3a3a3, -6px -6px 23px #ffffff;
       flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
       gap: 10px;
-    }
-    .corpDatas {
-      @include formDivs;
-    }
-    .corpAddress {
-      display: grid;
-      @include formDivs;
+      h2 {
+        font-size: 2rem;
+        text-align: center;
+        letter-spacing: 2px
+      }
+        @include inps;
+      .btns-step{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 5px;
+        button{
+          @include btns;
+          width: 10rem;
+          height: 3rem;
+          &.next-button{
+              background-color: $primary-color;
+              &:hover{
+                background-color: $white-text;
+                border: 2px solid $primary-color;
+                color: $primary-color;
+              }
+          }
+          &.prev-button{
+            background-color: $secondary-color;
+            &:hover{
+              background-color: $white-text;
+              border: 2px solid $secondary-color;
+              color: $secondary-color;
+            }
+          }
+        }
+      }
+}
+.main-content2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 8vh 92vh;
+  gap: 0px 0px;
+  grid-template-areas:
+    "header"
+    "main";
+}
+#header {
+  grid-area: header;
+  #nav-header2 {
+    background-color: $terc-color;
+    padding: 0 30px;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    gap: 70px;
+    a.link-logo {
+      .logo {
+        width: 50%;
+        height: auto;
+      }
     }
   }
+}
+
+#main-section2{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  grid-area: main;
+  height: 100%;
+  background-color: $white-text;
+  #stepForm {
+    width: 92%;
+    height: 95%;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    .form-step{
+        @include formsStep;
+    }
+  }
+}

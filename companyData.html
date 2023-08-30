@@ -1,105 +1,142 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Dados da Empresa</title>
-    <!-- Link CSS -->
-    <link rel="stylesheet" href="./css/style.css" />
-    <link
-      rel="shortcut icon"
-      href="./imgs/logo-ezpets.svg"
-      type="image/x-icon"
-    />
-  </head>
-  <body>
-    <div class="main-content2">
-      <header id="header">
-        <nav id="nav-header">
-          <a href="./signUp.html" class="arrowBac-link">
-            <img
-              src="./imgs/chevron-left.svg"
-              alt="Icone Voltar"
-              class="arrowBack"
-            />
-          </a>
-          <a href="" class="link-logo"
-            ><img src="./imgs/logo-ezpets.svg" alt="Logo EzPets" class="logo"
-          /></a>
-        </nav>
-      </header>
-      <main id="main-section">
-        <form class="form1" action="" method="post">
-          <div class="corpDatas">
-            <h2>Preencha alguns dados sobre seu Pet Shop:</h2>
-
-            <div class="div-inputs">
-              <div class="inps">
-                  <input type="text" name="corpName" id="corpName" />
-                  <label for="corpName">Razão Social:</label>
-              </div>
-
-              <div class="inps">
-                  <input
-                  type="text"
-                  name="petshopName"
-                  id="petshopName"
-                  placeholder="Ex: Pet Shop do João"
-                  />
-                  <label for="petshopName"
-                >Nome Fantasia (como aparecerá para seus clientes):</label
-                  >
-              </div>
-
-              <div class="inps">
-                  <input
-                  type="text"
-                  name="cnpj"
-                  id="cnpj"
-                  placeholder="XX.XXX.XXX/XXXX-XX"
-                  />
-                  <label for="cnpj">CNPJ: </label>
-              </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dados da Empresa</title>
+  <!-- Link CSS -->
+  <link rel="stylesheet" href="./css/style.css" />
+  <link
+    rel="shortcut icon"
+    href="./imgs/logo-ezpets.svg"
+    type="image/x-icon"
+  />
+</head>
+<body>
+  <div class="main-content2">
+    <header id="header">
+      <nav id="nav-header2">
+        <a href="./signUp.html" class="arrowBac-link">
+          <img
+            src="./imgs/chevron-left.svg"
+            alt="Icone Voltar"
+            class="arrowBack"
+          />
+        </a>
+        <a href="" class="link-logo">
+          <img src="./imgs/logo-ezpets.svg" alt="Logo EzPets" class="logo" />
+        </a>
+      </nav>
+    </header>
+    <main id="main-section2">
+      <form id="stepForm" class="needs-validation">
+        <!-- Step 1 -->
+        <div class="form-step step1">
+          <h2>Informações do Responsável</h2>
+          <div class="inps">
+            <input type="text" name="boss-name" id="boss-name"/>
+            <label for="boss-name">Nome do responsável:</label>
+          </div>
+          <div class="inps">
+            <input type="text" name="cpf" id="cpf"/>
+            <label for="cpf">CPF:</label>
+          </div>
+          <div class="inps">
+            <input type="email" name="email" id="email"/>
+            <label for="email">E-mail:</label>
+          </div>
+          <div class="inps">
+            <input type="text" name="tel" id="tel"/>
+            <label for="tel">Telefone:</label>
+          </div>
+          <div class="btns-step">
+            <button type="button" class="next-button">Continuar</button>
+          </div>
+        </div>
+        <!-- Step 2 -->
+        <div class="form-step step2">
+          <h2>Informações Empresariais</h2>
+          <div class="inps">
+            <input type="text" name="fantasy-name" id="fantasy-name" placeholder="Ex: Pet shop do João"/>
+            <label for="fantasy-name">Nome Fantasia:</label>
+          </div>
+          <div class="inps">
+            <input type="text" name="corpName" id="corpName"/>
+            <label for="corpName">Razão Social:</label>
+          </div>
+          <div class="inps">
+            <input type="text" name="cnpj" id="cnpj"/>
+            <label for="cnpj">CNPJ:</label>
+          </div>
+          <div class="btns-step">
+            <button type="button" class="prev-button">Voltar</button>
+            <button type="button" class="next-button">Continuar</button>
+          </div>
+        </div>
+        <!-- Step 3 -->
+        <div class="form-step step3">
+          <h2>Endereço do Pet Shop</h2>
+          <div class="inps">
+            <input type="text" name="cep" id="cep"/>
+            <label for="cep">CEP:</label>
+          </div>
+          <div class="inps">
+            <input type="text" name="street" id="street"/>
+            <label for="street">Rua:</label>
+          </div>
+          <div class="inps small-inps">
+            <div class="box-small-inps">
+              <input type="text" name="neighborh" id="neighborh">
+              <label for="neighborh">Bairro</label>
+            </div>
+            <div class="box-small-inps">
+              <input type="text" name="number" id="number"/>
+              <label for="number">Número</label>
             </div>
           </div>
-          <div class="corpAddress">
-            <h2>Agora nos informe o endereço:</h2>
-
-            <div class="div-inputs">
-              <div class="inps">
-                  <input type="text" name="cep" id="cep" placeholder="XXXXX-XXX" />
-                  <label for="cep">CEP:</label>
-              </div>
-
-              <div class="inps">
-                  <input type="text" name="street" id="street"/>
-                  <label for="street">Rua:</label>
-              </div>
-
-              <div class="inps">
-                  <input type="text" name="number id="number" size="5">
-                  <label for="number">Número:</label>
-              </div>
-
-              <div class="inps">
-                  <input type="text" name="neighbor" id="neighbor" />
-                  <label for="neighbor">Bairro:</label>
-              </div>
-
-              <div class="inps">
-                  <input type="text" name="city" id="city" />
-                  <label for="city">Cidade:</label>
-              </div>
-
-              <div class="inps">
-                  <input type="text" name="state" id="state" />
-                  <label for="state">Estado:</label>
-              </div>
+          <div class="inps small-inps">
+            <div class="box-small-inps">
+              <input type="text" name="state" id="state"/>
+            <label for="state">Estado</label>
+            </div>
+            <div class="box-small-inps">
+              <input type="text" name="city" id="city"/>
+              <label for="city">Cidade</label>
             </div>
           </div>
-        </form>
-      </main>
-    </div>
-    <script src="./js/companyData.js" type="module"></script>
-  </body>
+          <div class="btns-step">
+            <button type="button" class="prev-button">Voltar</button>
+          <button type="button" class="next-button">Continuar</button>
+          </div>
+        </div>
+        <!-- Step 4 -->
+        <div class="form-step step4">
+          <h2>Confirme seus dados</h2>
+          <div class="box-datas">
+            <p class="confirm-boss-name">Nome do responsável</p>
+            <p class="confirm-cpf">CPF: </p>
+            <p class="confirm-email">E-mail: </p>
+            <p class="confirm-tel">Telefone: </p>
+            <p class="confirm-fantasy-name">Nome Fantasia: </p>
+            <p class="confirm-cnpj">CNPJ:</p>
+            <p class="confirm-address">Endereço: </p>
+          </div>
+          <div class="inpts">
+            <input type="password" name="passw" id="passw">
+            <label for="passw">Crie uma senha para sua conta:</label>
+          </div>
+          <div class="inpts">
+            <input type="password" name="confirm-passw" id="confirm-passw">
+            <label for="confirm-passw">Confirme sua senha:</label>
+          </div>
+          <div class="btns-step">
+            <button type="button" class="prev-button">Voltar</button>
+          <button type="submit">Enviar</button>
+          </div>
+        </div>
+      </form>
+    </main>
+  </div>
+  <script src="./js/formCompanyData.js" type="module"></script>
+</body>
 </html>
