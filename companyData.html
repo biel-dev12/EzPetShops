@@ -113,29 +113,34 @@
         <div class="form-step step4">
           <h2>Confirme seus dados</h2>
           <div class="box-datas">
-            <p class="confirm-boss-name">Nome do responsável</p>
-            <p class="confirm-cpf">CPF: </p>
-            <p class="confirm-email">E-mail: </p>
-            <p class="confirm-tel">Telefone: </p>
-            <p class="confirm-fantasy-name">Nome Fantasia: </p>
-            <p class="confirm-cnpj">CNPJ:</p>
+            <p class="confirm-boss-name">Nome do responsável</p><hr>
+            <p class="confirm-cpf">CPF: </p><hr>
+            <p class="confirm-email">E-mail: </p><hr>
+            <p class="confirm-tel">Telefone: </p><hr>
+            <p class="confirm-fantasy-name">Nome Fantasia: </p><hr>
+            <p class="confirm-cnpj">CNPJ:</p><hr>
             <p class="confirm-address">Endereço: </p>
           </div>
-          <div class="inpts">
+          <div class="inps">
             <input type="password" name="passw" id="passw">
             <label for="passw">Crie uma senha para sua conta:</label>
           </div>
-          <div class="inpts">
+          <div class="inps">
             <input type="password" name="confirm-passw" id="confirm-passw">
             <label for="confirm-passw">Confirme sua senha:</label>
           </div>
           <div class="btns-step">
             <button type="button" class="prev-button">Voltar</button>
-          <button type="submit">Enviar</button>
+          <button type="submit" class="submit-button">Enviar</button>
           </div>
         </div>
       </form>
+      <div class="bg-pets"></div>
     </main>
+    <div class="form-submitted" style="display: none;">
+      <h1>Ebaa! A KauanPets foi cadastrada!</h1>
+      <p>Você está sendo encaminhado para página de <u>login</u>. Entre com seu e-mail e senha.</p>
+    </div>
   </div>
   <script src="./js/formCompanyData.js" type="module"></script>
 </body>

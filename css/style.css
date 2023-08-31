@@ -237,6 +237,7 @@ button {
   display: none;
 }
 #main-section .form-signup-login {
+  user-select: none;
   background-color: #F27649;
   max-width: 90%;
   height: 95%;
@@ -299,9 +300,19 @@ button {
   cursor: pointer;
   transition: 0.2s ease-in;
 }
+#main-section .form-signup-login .register .form button.signup {
+  background-color: transparent;
+}
 #main-section .form-signup-login .register .form button.signup:hover {
   background-color: #fff;
   color: #F27649;
+}
+#main-section .form-signup-login .register .form button.login {
+  background-color: transparent;
+}
+#main-section .form-signup-login .register .form button.login:hover {
+  background-color: #fff;
+  color: #1190CB;
 }
 #main-section .form-signup-login .register .form button + p {
   font-size: 1.1rem;
@@ -364,9 +375,19 @@ button {
   cursor: pointer;
   transition: 0.2s ease-in;
 }
+#main-section .form-signup-login .login .form button.signup {
+  background-color: transparent;
+}
 #main-section .form-signup-login .login .form button.signup:hover {
   background-color: #fff;
   color: #F27649;
+}
+#main-section .form-signup-login .login .form button.login {
+  background-color: transparent;
+}
+#main-section .form-signup-login .login .form button.login:hover {
+  background-color: #fff;
+  color: #1190CB;
 }
 #main-section .form-signup-login .login .form button + p {
   font-size: 1.1rem;
@@ -483,6 +504,9 @@ button {
   height: 100%;
   background-color: #fff;
 }
+#main-section2 .bg-pets {
+  display: none;
+}
 #main-section2 #stepForm {
   width: 92%;
   height: 95%;
@@ -522,6 +546,7 @@ button {
 #main-section2 #stepForm .form-step .inps.small-inps .box-small-inps {
   display: flex;
   flex-direction: column-reverse;
+  gap: 10px;
 }
 #main-section2 #stepForm .form-step .inps.small-inps input {
   width: 11rem;
@@ -597,10 +622,10 @@ button {
   width: 10rem;
   height: 3rem;
 }
-#main-section2 #stepForm .form-step .btns-step button.next-button {
+#main-section2 #stepForm .form-step .btns-step button.next-button, #main-section2 #stepForm .form-step .btns-step button.submit-button {
   background-color: #F27649;
 }
-#main-section2 #stepForm .form-step .btns-step button.next-button:hover {
+#main-section2 #stepForm .form-step .btns-step button.next-button:hover, #main-section2 #stepForm .form-step .btns-step button.submit-button:hover {
   background-color: #fff;
   border: 2px solid #F27649;
   color: #F27649;
@@ -612,6 +637,52 @@ button {
   background-color: #fff;
   border: 2px solid #1190CB;
   color: #1190CB;
+}
+#main-section2 #stepForm .form-step .box-datas {
+  margin-bottom: 15px;
+  overflow-y: auto;
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  font-size: 1.1rem;
+  border: 1px solid #F27649;
+  border-radius: 12px;
+  padding: 25px 15px;
+}
+#main-section2 #stepForm .form-step .box-datas p {
+  padding: 8px 0;
+}
+
+.form-submitted {
+  width: 50%;
+  height: 30%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: red;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (min-width: 900px) {
+  #main-section2 {
+    padding: 0 0 0 20px;
+    gap: 20px;
+  }
+  #main-section2 .bg-pets {
+    border-radius: 2px;
+    display: block !important;
+    min-width: 55%;
+    height: 100%;
+    background-image: url("../../imgs/bgPets.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */

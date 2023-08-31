@@ -5,6 +5,7 @@ const prevButtons = Array.from(document.querySelectorAll('.prev-button'));
 const nextButtons = Array.from(document.querySelectorAll('.next-button'));
 const form = document.getElementById('stepForm');
 const inputs = document.querySelectorAll(".inps input");
+const modalFormSubmitted = document.querySelector(".form-submitted");
 
 let currentStep = 0;
 
@@ -23,7 +24,6 @@ function isStepValid() {
       input.classList.add("error");
       isValid = false;
 
-      // Adicionar a mensagem de erro acima do input
       let errorMsg = input.parentElement.querySelector(".error-message");
       if (!errorMsg) {
         errorMsg = document.createElement("span");
@@ -33,7 +33,6 @@ function isStepValid() {
       }
     } else {
       input.classList.remove("error");
-      // Remover a mensagem de erro se existir
       const errorMsg = input.parentElement.querySelector(".error-message");
       if (errorMsg) {
         errorMsg.remove();
@@ -44,57 +43,50 @@ function isStepValid() {
   return isValid;
 }
 
-function nextStep() {
-  if (currentStep < formSteps.length - 1) {
-    if (isStepValid()) {
-      currentStep++;
-      updateStepVisibility();
-    }
-  }
-}
-
-function previousStep() {
-  if (currentStep > 0) {
-    currentStep--;
-    updateStepVisibility();
-  }
-}
-
-prevButtons.forEach(button => {
-  button.addEventListener('click', event => {
-    event.preventDefault();
-    previousStep();
-  });
-});
-
-nextButtons.forEach(button => {
-  button.addEventListener('click', event => {
-    event.preventDefault();
-    nextStep();
-  });
-});
-
 inputs.forEach(input => {
   input.addEventListener('input', () => {
-    updateDisplayedDatas();
+    updateDisplayedDatas(); // Chama a função para atualizar os dados em tempo real
+  });
+});
 
-    if (input.value.trim() !== '') {
-      input.classList.remove("error");
-      const errorMsg = input.parentElement.querySelector(".error-message");
-      if (errorMsg) {
-        errorMsg.remove();
-      }
+function goToStep(step) {
+  currentStep = step;
+  updateStepVisibility();
+}
+
+prevButtons.forEach((button, index) => {
+  button.addEventListener('click', event => {
+    event.preventDefault();
+    goToStep(index - 1);
+  });
+});
+
+nextButtons.forEach((button, index) => {
+  button.addEventListener('click', event => {
+    event.preventDefault();
+    if (isStepValid()) {
+      goToStep(index + 1);
     }
   });
 });
 
 form.addEventListener('submit', event => {
+  event.preventDefault();
+
   if (!form.checkValidity()) {
-    event.preventDefault();
     event.stopPropagation();
-  } else if (currentStep === formSteps.length - 1) {
-    alert('Formulário enviado com sucesso!');
+  } else {
+    // Mostrar o modal após o envio bem-sucedido
+    modalFormSubmitted.style.display = "flex";
+
+    setTimeout(() => {
+      modalFormSubmitted.style.display = "none";
+      form.reset();
+      goToStep(0);
+      location.href = "../signUp.html";
+    }, 2000);
   }
+
   form.classList.add('was-validated');
 });
 

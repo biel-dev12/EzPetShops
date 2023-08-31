@@ -201,6 +201,7 @@
     display: none;
   }
   .form-signup-login {
+    user-select: none;
     background-color: $primary-color;
     max-width: 90%;
     height: 95%;
@@ -245,9 +246,19 @@
       }
       button {
         @include btns;
-        &.signup:hover {
-          background-color: $white-text;
-          color: $primary-color;
+        &.signup{
+          background-color: transparent;
+          &:hover {
+            background-color: $white-text;
+            color: $primary-color;
+          }
+        }
+        &.login{
+          background-color: transparent;
+          &:hover {
+            background-color: $white-text;
+            color: $secondary-color;
+          }
         }
         + p {
           font-size: 1.1rem;

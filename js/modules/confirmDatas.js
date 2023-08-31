@@ -23,30 +23,30 @@ export function updateDisplayedDatas() {
   const neighborhInput = document.querySelector("input[name='neighborh']");
 
   if (confirmBossName && bossNameInput) {
-    confirmBossName.innerText = `Nome do responsável: ${bossNameInput.value}`;
+    confirmBossName.innerHTML = `<u>Nome do responsável:</u> ${bossNameInput.value}`;
   }
 
   if (confirmCpf && cpfInput) {
-    confirmCpf.innerText = `CPF: ${cpfInput.value}`;
+    confirmCpf.innerHTML = `<u>CPF:</u> ${cpfInput.value}`;
   }
 
   if (confirmEmail && emailInput) {
-    confirmEmail.innerText = `E-mail: ${emailInput.value}`;
+    confirmEmail.innerHTML = `<u>E-mail:</u> ${emailInput.value}`;
   }
 
   if (confirmTel && telInput) {
-    confirmTel.innerText = `Telefone: ${telInput.value}`;
+    confirmTel.innerHTML = `<u>Telefone:</u> ${telInput.value}`;
   }
 
   if (confirmFantasyName && fantasyNameInput) {
-    confirmFantasyName.innerText = `Nome fantasia: ${fantasyNameInput.value}`;
+    confirmFantasyName.innerHTML = `<u>Nome fantasia:</u> ${fantasyNameInput.value}`;
   }
 
   if (confirmCnpj && cnpjInput) {
-    confirmCnpj.innerText = `CNPJ: ${cnpjInput.value}`;
+    confirmCnpj.innerHTML = `<u>CNPJ:</u> ${cnpjInput.value}`;
   }
 
   if (confirmAddress && streetInput && numberInput && neighborhInput){
-    confirmAddress.innerText = `Endereço: ${streetInput.value}, ${numberInput.value} - ${neighborhInput.value}`;
+    confirmAddress.innerHTML = `<u>Endereço:</u> ${streetInput.value}, ${numberInput.value} - ${neighborhInput.value}`;
   }
 }

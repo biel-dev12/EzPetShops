@@ -12,6 +12,7 @@
       .box-small-inps{
         display: flex;
         flex-direction: column-reverse;
+        gap: 10px;
       }
       input{
         width: 11rem;
@@ -102,7 +103,7 @@
           @include btns;
           width: 10rem;
           height: 3rem;
-          &.next-button{
+          &.next-button, &.submit-button{
               background-color: $primary-color;
               &:hover{
                 background-color: $white-text;
@@ -159,6 +160,9 @@
   grid-area: main;
   height: 100%;
   background-color: $white-text;
+   .bg-pets {
+    display: none;
+  }
   #stepForm {
     width: 92%;
     height: 95%;
@@ -167,6 +171,52 @@
     gap: 10px;
     .form-step{
         @include formsStep;
+        .box-datas{
+          margin-bottom: 15px;
+          overflow-y: auto;
+          width: 100%;
+          height: auto;
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          font-size: 1.1rem;
+          border: 1px solid $primary-color;
+          border-radius: 12px;
+          padding: 25px 15px;
+          p{
+            padding: 8px 0;
+          }
+        }
     }
   }
+}
+
+.form-submitted{
+  width: 50%;
+  height: 30%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: red;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+@media only screen and (min-width: 900px) {
+ #main-section2{
+  padding: 0 0 0 20px;
+  gap: 20px; 
+  .bg-pets {
+    border-radius: 2px;
+    display: block!important;
+    min-width: 55%;
+    height: 100%;
+    background-image: url("../../imgs/bgPets.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+  }
+}
 }
