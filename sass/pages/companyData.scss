@@ -7,33 +7,33 @@
     gap: 10px;
     justify-content: center;
     align-items: center;
-    &.small-inps{
+    &.small-inps {
       flex-direction: row;
-      .box-small-inps{
+      .box-small-inps {
         display: flex;
         flex-direction: column-reverse;
         gap: 10px;
       }
-      input{
+      input {
         width: 11rem;
-        &#neighborh{
+        &#neighborh {
           width: 15rem;
         }
-        &#number{
+        &#number {
           width: 7rem;
         }
       }
     }
-    span{
+    span {
       align-self: self-start;
       color: $red-color;
     }
-    label{
+    label {
       font-size: 1.3rem;
       width: fit-content;
       cursor: pointer;
       align-self: self-start;
-      transition: all .5s;
+      transition: all 0.5s;
       &::after {
         content: "";
         display: block;
@@ -42,7 +42,6 @@
         background-color: $black-text;
         transition: all 0.5s;
       }
-    
     }
     input {
       width: 22rem;
@@ -56,19 +55,19 @@
       // transition: all 0.5s;
       &.error {
         border: 2px solid $red-color;
-        ~ label{
+        ~ label {
           color: $red-color;
           font-weight: 500;
-          &::after{
+          &::after {
             background-color: $red-color;
           }
         }
       }
-      &.valid{
+      &.valid {
         border: 1px solid $secondary-color;
       }
-      &:focus ~ label{
-        &::after{
+      &:focus ~ label {
+        &::after {
           width: 100%;
         }
       }
@@ -76,51 +75,52 @@
   }
 }
 
-@mixin formsStep{
+@mixin formsStep {
   width: 100%;
-      height: 100%;
-      overflow: hidden;
-      padding: 30px 25px;
-      border-radius: 20px;
-      background: #ffffff;
-      box-shadow: 6px 6px 23px #a3a3a3, -6px -6px 23px #ffffff;
-      flex-direction: column;
-      justify-content: space-between;
-      align-items: center;
-      gap: 10px;
-      h2 {
-        font-size: 2rem;
-        text-align: center;
-        letter-spacing: 2px
-      }
-        @include inps;
-      .btns-step{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        gap: 5px;
-        button{
-          @include btns;
-          width: 10rem;
-          height: 3rem;
-          &.next-button, &.submit-button{
-              background-color: $primary-color;
-              &:hover{
-                background-color: $white-text;
-                border: 2px solid $primary-color;
-                color: $primary-color;
-              }
-          }
-          &.prev-button{
-            background-color: $secondary-color;
-            &:hover{
-              background-color: $white-text;
-              border: 2px solid $secondary-color;
-              color: $secondary-color;
-            }
-          }
+  height: 100%;
+  overflow: hidden;
+  padding: 30px 25px;
+  border-radius: 20px;
+  background: $white-text;
+  box-shadow: 6px 6px 23px #a3a3a3, -6px -6px 23px $white-text;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10px;
+  h2 {
+    font-size: 2rem;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+  @include inps;
+  .btns-step {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    button {
+      @include btns;
+      width: 10rem;
+      height: 3rem;
+      &.next-button,
+      &.submit-button {
+        background-color: $primary-color;
+        &:hover {
+          background-color: $white-text;
+          border: 2px solid $primary-color;
+          color: $primary-color;
         }
       }
+      &.prev-button {
+        background-color: $secondary-color;
+        &:hover {
+          background-color: $white-text;
+          border: 2px solid $secondary-color;
+          color: $secondary-color;
+        }
+      }
+    }
+  }
 }
 .main-content2 {
   display: grid;
@@ -152,7 +152,7 @@
   }
 }
 
-#main-section2{
+#main-section2 {
   width: 100%;
   display: flex;
   justify-content: center;
@@ -160,7 +160,7 @@
   grid-area: main;
   height: 100%;
   background-color: $white-text;
-   .bg-pets {
+  .bg-pets {
     display: none;
   }
   #stepForm {
@@ -169,54 +169,74 @@
     display: flex;
     flex-direction: column;
     gap: 10px;
-    .form-step{
-        @include formsStep;
-        .box-datas{
-          margin-bottom: 15px;
-          overflow-y: auto;
-          width: 100%;
-          height: auto;
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
-          font-size: 1.1rem;
-          border: 1px solid $primary-color;
-          border-radius: 12px;
-          padding: 25px 15px;
-          p{
-            padding: 8px 0;
-          }
+    .form-step {
+      @include formsStep;
+      .box-datas {
+        margin-bottom: 15px;
+        overflow-y: auto;
+        width: 100%;
+        height: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        font-size: 1.1rem;
+        border: 1px solid $primary-color;
+        border-radius: 12px;
+        padding: 25px 15px;
+        p {
+          padding: 8px 0;
         }
+      }
     }
   }
 }
 
-.form-submitted{
-  width: 50%;
-  height: 30%;
+.form-submitted {
+  width: 98%;
+  height: 35%;
   position: fixed;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  background-color: red;
+  padding: 10px 25px;
+  border-radius: 20px;
+  background: $white-text;
+  box-shadow: 6px 6px 23px #a3a3a3, -6px -6px 23px $white-text;
+  border: 3px solid $secondary-color;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
+  text-align: center;
+  h1 {
+    font-size: 1.7rem;
+    span {
+      color: $primary-color;
+      font-size: 2rem;
+    }
+  }
+  svg path,
+  svg rect{
+  fill: $primary-color;
+}
 }
 
 @media only screen and (min-width: 900px) {
- #main-section2{
-  padding: 0 0 0 20px;
-  gap: 20px; 
-  .bg-pets {
-    border-radius: 2px;
-    display: block!important;
-    min-width: 55%;
-    height: 100%;
-    background-image: url("../../imgs/bgPets.svg");
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: right;
+  #main-section2 {
+    padding: 0 0 0 20px;
+    gap: 20px;
+    .bg-pets {
+      border-radius: 2px;
+      display: block !important;
+      min-width: 55%;
+      height: 100%;
+      background-image: url("../../imgs/bgPets.svg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: right;
+    }
   }
-}
+  .form-submitted{
+  width: 50%;   
+  height: 35%;
+  }
 }

@@ -50,14 +50,16 @@ inputs.forEach(input => {
 });
 
 function goToStep(step) {
-  currentStep = step;
-  updateStepVisibility();
+  if (step >= 0 && step < formSteps.length) {
+    currentStep = step;
+    updateStepVisibility();
+  }
 }
 
 prevButtons.forEach((button, index) => {
   button.addEventListener('click', event => {
     event.preventDefault();
-    goToStep(index - 1);
+    goToStep(currentStep - 1); // Vá para a etapa anterior
   });
 });
 
@@ -77,14 +79,18 @@ form.addEventListener('submit', event => {
     event.stopPropagation();
   } else {
     // Mostrar o modal após o envio bem-sucedido
+    const petshopName = document.querySelector(".form-submitted h1 span");
+    const inpPetshopName = document.querySelector("input[name='fantasy-name']").value;
+    const mainAndHeader = [document.querySelector("#main-section2"), document.querySelector("#header")]
     modalFormSubmitted.style.display = "flex";
-
+    petshopName.innerText = inpPetshopName;
+    mainAndHeader.forEach( el => el.style = "filter: blur(5px);");
     setTimeout(() => {
       modalFormSubmitted.style.display = "none";
       form.reset();
       goToStep(0);
       location.href = "../signUp.html";
-    }, 2000);
+    }, 10000);
   }
 
   form.classList.add('was-validated');

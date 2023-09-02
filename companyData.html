@@ -38,7 +38,7 @@
             <label for="boss-name">Nome do responsável:</label>
           </div>
           <div class="inps">
-            <input type="text" name="cpf" id="cpf"/>
+            <input type="text" name="cpf" id="cpf" onblur="validarCPF(this.value);"/>
             <label for="cpf">CPF:</label>
           </div>
           <div class="inps">
@@ -47,7 +47,7 @@
           </div>
           <div class="inps">
             <input type="text" name="tel" id="tel"/>
-            <label for="tel">Telefone:</label>
+            <label for="tel">Telefone/Celular:</label>
           </div>
           <div class="btns-step">
             <button type="button" class="next-button">Continuar</button>
@@ -57,16 +57,16 @@
         <div class="form-step step2">
           <h2>Informações Empresariais</h2>
           <div class="inps">
-            <input type="text" name="fantasy-name" id="fantasy-name" placeholder="Ex: Pet shop do João"/>
-            <label for="fantasy-name">Nome Fantasia:</label>
+            <input type="text" name="cnpj" id="cnpj" onblur="consultarCNPJ(this.value);"/>
+            <label for="cnpj">CNPJ:</label>
           </div>
           <div class="inps">
             <input type="text" name="corpName" id="corpName"/>
             <label for="corpName">Razão Social:</label>
           </div>
           <div class="inps">
-            <input type="text" name="cnpj" id="cnpj"/>
-            <label for="cnpj">CNPJ:</label>
+            <input type="text" name="fantasy-name" id="fantasy-name" placeholder="Ex: Pet shop do João"/>
+            <label for="fantasy-name">Nome Fantasia:</label>
           </div>
           <div class="btns-step">
             <button type="button" class="prev-button">Voltar</button>
@@ -77,16 +77,16 @@
         <div class="form-step step3">
           <h2>Endereço do Pet Shop</h2>
           <div class="inps">
-            <input type="text" name="cep" id="cep"/>
+            <input type="text" name="cep" id="cep" onblur="pesquisacep(this.value);"/>
             <label for="cep">CEP:</label>
           </div>
           <div class="inps">
-            <input type="text" name="street" id="street"/>
+            <input type="text" name="street" id="street" disabled/>
             <label for="street">Rua:</label>
           </div>
           <div class="inps small-inps">
             <div class="box-small-inps">
-              <input type="text" name="neighborh" id="neighborh">
+              <input type="text" name="neighborh" id="neighborh" disabled>
               <label for="neighborh">Bairro</label>
             </div>
             <div class="box-small-inps">
@@ -96,11 +96,11 @@
           </div>
           <div class="inps small-inps">
             <div class="box-small-inps">
-              <input type="text" name="state" id="state"/>
+              <input type="text" name="state" id="state" disabled/>
             <label for="state">Estado</label>
             </div>
             <div class="box-small-inps">
-              <input type="text" name="city" id="city"/>
+              <input type="text" name="city" id="city" disabled/>
               <label for="city">Cidade</label>
             </div>
           </div>
@@ -138,10 +138,30 @@
       <div class="bg-pets"></div>
     </main>
     <div class="form-submitted" style="display: none;">
-      <h1>Ebaa! A KauanPets foi cadastrada!</h1>
+      <h1>Ebaa! A <span></span> foi cadastrada com sucesso, agora você faz parte da equipe!</h1>
       <p>Você está sendo encaminhado para página de <u>login</u>. Entre com seu e-mail e senha.</p>
+      <div class="loader loader--style2" title="1">
+        <svg version="1.1" id="loader-1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+           width="50px" height="50px" viewBox="0 0 50 50" style="enable-background:new 0 0 50 50;" xml:space="preserve">
+        <path fill="#000" d="M25.251,6.461c-10.318,0-18.683,8.365-18.683,18.683h4.068c0-8.071,6.543-14.615,14.615-14.615V6.461z">
+          <animateTransform attributeType="xml"
+            attributeName="transform"
+            type="rotate"
+            from="0 25 25"
+            to="360 25 25"
+            dur="0.6s"
+            repeatCount="indefinite"/>
+          </path>
+        </svg>
+      </div>
     </div>
   </div>
   <script src="./js/formCompanyData.js" type="module"></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+  <script src="./js/callMaskInputs.js"></script>
+  <script src="./js/validateData/searchCep.js"></script>
+  <script src="./js/validateData/valCpf.js"></script>
+  <script src="./js/validateData/valCnpj.js"></script>
 </body>
 </html>

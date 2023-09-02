@@ -62,9 +62,9 @@
               <form class="form">
                 <label aria-hidden="true">Cadastrar Pet Shop</label>
                 <p>Sua vida mais easy!</p>
-                <input class="input" type="text" name="name" placeholder="Nome">
-                <input class="input" type="email" name="email" placeholder="E-mail">
-                <input class="input" type="text" name="tel" placeholder="Telefone">
+                <input class="input" type="text" id="name" name="name" placeholder="Nome">
+                <input class="input" type="email" name="email" id="email" placeholder="E-mail">
+                <input class="input" type="text" id="tel" name="tel" placeholder="Telefone">
                 <button class="signup">Cadastrar</button>
                 <p>Já possui uma conta? <span class="link-login">Clique aqui para entrar!</span></p>
               </form>
@@ -81,10 +81,11 @@
               </form>
             </div>
         </div>
-      </main>
-      <footer id="footer">EzPets - Todos os direitos reservados &copy; 2023</footer>
+      </main>      
     </div>
     <script src="./js/signup.js" type="module"></script>
-    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
+    <script src="./js/callMaskInputs.js"></script>
   </body>
 </html>
