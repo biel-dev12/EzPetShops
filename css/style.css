@@ -153,7 +153,7 @@ button {
   overflow: hidden;
   transition: all 0.3s;
 }
-#header #nav-header #nav-list li.li-drop .dropdown:hover {
+z #header #nav-header #nav-list li.li-drop .dropdown:hover {
   opacity: 1;
 }
 #header #nav-header #nav-list li.li-drop .dropdown.show {
